@@ -17,7 +17,7 @@ const IconCard: React.FC<IconCardProps> = ({ name }) => {
   return (
     <div className='icon-card'>
       <Link to={`/icon/${name}`}>
-        <div dangerouslySetInnerHTML={{ __html: svgContent }} />
+        <div className='ino-icon' dangerouslySetInnerHTML={{ __html: svgContent }} />
         <p>{name}</p>
       </Link>
     </div>

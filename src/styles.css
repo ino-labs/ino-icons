@@ -49,7 +49,14 @@ input {
 
 nav {
   display: flex;
+  align-items: center;
   border-bottom: 1px solid var(--ino-system-border-color);
+  height: 64px;
+}
+
+nav ul {
+  display: flex;
+  gap: 8px;
 }
 
 a {
@@ -72,6 +79,13 @@ a {
   position: relative;
 }
 
+.icon-card .ino-icon path {
+  stroke: var(--ino-system-icon-card-color);
+}
+.icon-card a:hover .ino-icon path {
+  stroke: var(--ino-system-icon-card-color-hover);
+}
+
 .icon-card a {
   display: flex;
   flex-direction: column;
@@ -84,6 +98,7 @@ a {
   text-decoration: none;
   transition: all .2s ease-in-out;
   background-color: var(--ino-system-icon-card-bg-color);
+  color: var(--ino-system-icon-card-color);
 }
 
 .icon-card a:hover {
@@ -91,11 +106,12 @@ a {
   color: var(--ino-system-icon-card-color-hover);
 }
 .icon-card a:hover p {
-  height: auto;
+  max-height: 40px;
   opacity: 1;
 }
 
 .icon-card p {
-  height: 0;
+  max-height: 0;
   opacity: 0;
+  transition: max-height .2s ease-in-out;
 }
