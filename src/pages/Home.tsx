@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import IconCard from '../components/IconCard';
+import NavBar from '../components/NavBar';
 
 const Home: React.FC = () => {
   const [icons, setIcons] = useState<string[]>([]);
@@ -15,14 +16,9 @@ const Home: React.FC = () => {
 
   return (
     <div>
+      <NavBar search={search} setSearch={setSearch} />
       <h1>{search ? `INO icons - ${search}` : 'Awesome free SVG icons'}</h1>
-      <input
-        type="text"
-        placeholder="Search icons..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-      />
-      <div>
+      <div className='icons-list'>
         {filteredIcons.map(icon => (
           <IconCard key={icon} name={icon} />
         ))}

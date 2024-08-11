@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import NavBar from '../components/NavBar';
 
 const IconPage: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -7,6 +8,7 @@ const IconPage: React.FC = () => {
   const [strokeWidth, setStrokeWidth] = useState(1);
   const [color, setColor] = useState('#000000');
   const [svgContent, setSvgContent] = useState<string>('');
+  const [search, setSearch] = useState('');
 
   const handleDownload = () => {
     const svgElement = document.getElementById('svg-icon') as SVGSVGElement;
@@ -34,6 +36,7 @@ const IconPage: React.FC = () => {
 
   return (
     <div>
+      <NavBar search={search} setSearch={setSearch} />
       <h1>{name}</h1>
       <div dangerouslySetInnerHTML={{ __html: updatedSvgContent }} />
       <div>

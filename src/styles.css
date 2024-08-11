@@ -1,15 +1,101 @@
+:root {
+  --ino-color-black: #000;
+  --ino-color-white: #FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
+
+  background-color: var(--ino-color-white);
+  color: var(--ino-color-black);
+  --ino-system-border-color: #BDBDBD;
+  --ino-system-link-color: var(--ino-color-black);
+  --ino-system-icon-card-bg-color: var(--ino-color-white);
+  --ino-system-icon-card-bg-color-hover: var(--ino-color-black);
+  --ino-system-icon-card-color: var(--ino-color-black);
+  --ino-system-icon-card-color-hover: var(--ino-color-white);
+}
+
+body.dark-mode {
+  color-scheme: dark;
+
+  background-color: var(--ino-color-black);
+  color: var(--ino-color-white);
+  --ino-system-border-color: #303030;
+  --ino-system-link-color: var(--ino-color-white);
+  --ino-system-icon-card-bg-color: var(--ino-color-black);
+  --ino-system-icon-card-bg-color-hover: var(--ino-color-white);
+  --ino-system-icon-card-color: var(--ino-color-white);
+  --ino-system-icon-card-color-hover: var(--ino-color-black);
 }
 
 h1 {
   text-align: center;
 }
 
-div {
-  margin: 20px;
+ul {
+  list-style: none;
 }
 
 input {
   margin: 5px;
+}
+
+nav {
+  display: flex;
+  border-bottom: 1px solid var(--ino-system-border-color);
+}
+
+a {
+  color: var(--ino-system-link-color);
+}
+
+.icons-list {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  border-top: 1px solid var(--ino-system-border-color);
+  border-left: 1px solid var(--ino-system-border-color);
+}
+
+.icon-card {
+  border: 1px solid var(--ino-system-border-color);
+  aspect-ratio: 1/1;
+  border-top: none;
+  border-left: none;
+  position: relative;
+}
+
+.icon-card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  background-color: var(--ino-system-icon-card-bg-color);
+}
+
+.icon-card a:hover {
+  background-color: var(--ino-system-icon-card-bg-color-hover);
+  color: var(--ino-system-icon-card-color-hover);
+}
+.icon-card a:hover p {
+  height: auto;
+  opacity: 1;
+}
+
+.icon-card p {
+  height: 0;
+  opacity: 0;
 }
