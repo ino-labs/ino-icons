@@ -53,7 +53,9 @@ const IconPage: React.FC = () => {
         <label>
           Size:
           <input
-            type="number"
+            type="range"
+            min="16" 
+            max="200"
             value={size}
             onChange={e => setSize(Number(e.target.value))}
           />
@@ -61,7 +63,9 @@ const IconPage: React.FC = () => {
         <label>
           Stroke Width:
           <input
-            type="number"
+            type="range"
+            min="1" 
+            max="5"
             value={strokeWidth}
             onChange={e => setStrokeWidth(Number(e.target.value))}
           />

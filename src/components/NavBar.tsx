@@ -35,9 +35,9 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
         <Search search={search} setSearch={setSearch} />
       </div>
       <ul className='dark-donate-container'>
-        <li><Link className='link' to="https://github.com/n3pu/ino-icons" target="_blank" rel="noopener noreferrer">Buy me a coffee</Link></li>
+        <li><Link className='link' to="https://buymeacoffee.com/n3pu" target="_blank" rel="noopener noreferrer">Buy me a coffee</Link></li>
         <li>or</li>
-        <li><Link className='link' to="/about">Donate</Link></li>
+        <li><Link className='link' to="https://www.paypal.com/donate/?business=CJPN8GQVW32UU&amount=5&no_recurring=0&item_name=Support+me+if+you+think+I%27ve+given+you+good+results&currency_code=USD" target="_blank" rel="noopener noreferrer">Donate</Link></li>
       </ul>
       <ul className='dark-mode-container'>
         <li><Link className='link' to="https://github.com/n3pu/ino-icons" target="_blank" rel="noopener noreferrer">Github</Link></li>
