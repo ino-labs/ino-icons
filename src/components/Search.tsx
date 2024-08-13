@@ -8,6 +8,7 @@ interface SearchProps {
 const Search: React.FC<SearchProps> = ({ search, setSearch }) => {
   return (
     <input
+      className='search-icons'
       type="text"
       placeholder="Search icons..."
       value={search}

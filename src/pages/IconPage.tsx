@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
+import { useDarkMode } from '../contexts/DarkModeContext';
 
 const IconPage: React.FC = () => {
   const { name } = useParams<{ name: string }>();
   const [size, setSize] = useState(100);
   const [strokeWidth, setStrokeWidth] = useState(1);
-  const [color, setColor] = useState('#000000');
   const [svgContent, setSvgContent] = useState<string>('');
   const [search, setSearch] = useState('');
+  const { darkMode } = useDarkMode();
+
+  // Define a cor inicial baseada no modo dark
+  const [color, setColor] = useState(darkMode ? '#FFFFFF' : '#000000');
 
   const handleDownload = () => {
     const svgElement = document.getElementById('svg-icon') as SVGSVGElement;
@@ -29,10 +33,16 @@ const IconPage: React.FC = () => {
       .then(data => setSvgContent(data));
   }, [name]);
 
+  // Atualiza a cor do ícone quando o modo dark muda
+  useEffect(() => {
+    setColor(darkMode ? '#FFFFFF' : '#000000');
+  }, [darkMode]);
+
+  // Atualiza o conteúdo SVG com os novos valores
   const updatedSvgContent = svgContent
     .replace(/<svg/, `<svg id="svg-icon" style="width: ${size}px; height: ${size}px;"`)
-    .replace(/stroke-width="[^"]*"/, `stroke-width="${strokeWidth}"`)
-    .replace(/stroke="[^"]*"/, `stroke="${color}"`);
+    .replace(/stroke-width="[^"]*"/g, `stroke-width="${strokeWidth}"`)
+    .replace(/stroke="[^"]*"/g, `stroke="${color}"`);
 
   return (
     <div>

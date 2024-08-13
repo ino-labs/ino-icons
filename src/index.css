@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --ino-color-black: #000;
+  --ino-color-white: #FFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Nunito, sans-serif;
+
+  background-color: var(--ino-color-white);
+  color: var(--ino-color-black);
+  --ino-system-border-color: #BDBDBD;
+  --ino-system-label-color: var(--ino-color-black);
+  --ino-system-link-color: var(--ino-color-black);
+  --ino-system-icon-card-bg-color: var(--ino-color-white);
+  --ino-system-icon-card-bg-color-hover: var(--ino-color-black);
+  --ino-system-icon-card-color: var(--ino-color-black);
+  --ino-system-icon-card-color-hover: var(--ino-color-white);
+}
+
+body.dark-mode {
+  color-scheme: dark;
+
+  background-color: var(--ino-color-black);
+  color: var(--ino-color-white);
+  --ino-system-border-color: #303030;
+  --ino-system-label-color: var(--ino-color-white);
+  --ino-system-link-color: var(--ino-color-white);
+  --ino-system-icon-card-bg-color: var(--ino-color-black);
+  --ino-system-icon-card-bg-color-hover: var(--ino-color-white);
+  --ino-system-icon-card-color: var(--ino-color-white);
+  --ino-system-icon-card-color-hover: var(--ino-color-black);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--ino-system-border-color);
+  height: 64px;
+}
+
+nav ul {
+  display: flex;
+  gap: 8px;
+}
+
+a {
+  color: var(--ino-system-link-color);
+}
+
+input.search-icons {
+  background-color: transparent;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+}
+input.search-icons::placeholder {
+  color: var(--ino-system-label-color);
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  border-right: 1px solid var(--ino-system-border-color);
+  padding: 4px 16px;
+  gap: 4px;
+}
+.nav-title img {
+  height: 32px;
+  width: 32px;
+  margin-right: 4px;
+}
+.nav-menu {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--ino-system-border-color);
+}
+.nav-menu img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.nav-icon-name {
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+.nav-icon-version {
+  color: #757575;
+  font-size: 16px;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 64px;
+  padding: 4px 16px;
+  gap: 4px;
+  border-right: 1px solid var(--ino-system-border-color);
+}
+.dark-mode-container {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 4px 16px;
+  gap: 24px;
+}
+.dark-donate-container {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 4px 16px;
+  gap: 8px;
+  border-right: 1px solid var(--ino-system-border-color);
+}
+.dark-donate-container li {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.icons-list {
+  display: grid;
+  gap: 0;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  border-top: 1px solid var(--ino-system-border-color);
+  border-left: 1px solid var(--ino-system-border-color);
+}
+
+.icon-card {
+  border: 1px solid var(--ino-system-border-color);
+  aspect-ratio: 1/1;
+  border-top: none;
+  border-left: none;
+  position: relative;
+}
+
+.icon-card .ino-icon path {
+  stroke: var(--ino-system-icon-card-color);
+}
+.icon-card a:hover .ino-icon path {
+  stroke: var(--ino-system-icon-card-color-hover);
+}
+
+.icon-card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  background-color: var(--ino-system-icon-card-bg-color);
+  color: var(--ino-system-icon-card-color);
+}
+
+.icon-card a:hover {
+  background-color: var(--ino-system-icon-card-bg-color-hover);
+  color: var(--ino-system-icon-card-color-hover);
+}
+.icon-card a:hover p {
+  max-height: 40px;
+  opacity: 1;
+}
+
+.icon-card p {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height .2s ease-in-out;
+  font-size: 12px;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+  border-bottom: 2px solid var(--ino-system-label-color);
+}
+
+.toggleDarkLabel {
+  height: 32px;
+  width: 60px;
+  border-radius: 20px;
+  border: 1px solid var(--ino-system-border-color);
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  gap: 4px;
+  cursor: pointer;
+}
+.toggleDarkLabel .toggleDarkIcon.moon img {
+  filter: contrast(0.1);
+}
+.toggleDarkLabel .toggleDarkIcon.sun {
+  background-color: var(--ino-system-label-color);
+}
+.toggleDarkLabel .toggleDarkIcon.sun img {
+  filter: invert(1);
+}
+.toggleDarkLabel:has(input:checked) .toggleDarkIcon.sun {
+  background-color: var(--ino-system-icon-card-bg-color);
+}
+.toggleDarkLabel:has(input:checked) .toggleDarkIcon.moon {
+  background-color: var(--ino-system-label-color);
+}
+.toggleDarkLabel:has(input:checked) .toggleDarkIcon.moon img {
+  filter: contrast(1);
+}
+.toggleDarkLabel:has(input:checked) .toggleDarkIcon.sun img {
+  filter: contrast(0.1);
+}
+.toggleDarkLabel input {
+  display: none;
+}
+.toggleDarkLabel .toggleDarkIcon {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+.toggleDarkLabel img {
+  width: 16px;
+  height: 16px;
+}
