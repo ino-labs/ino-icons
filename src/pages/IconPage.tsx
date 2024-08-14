@@ -20,19 +20,6 @@ const IconPage: React.FC = () => {
   const defaultColor = darkMode ? '#FFFFFF' : '#000000';
   const [color, setColor] = useState(defaultColor);
 
-  const handleDownload = () => {
-    const svgElement = document.getElementById('svg-icon') as SVGSVGElement;
-    const serializer = new XMLSerializer();
-    const source = serializer.serializeToString(svgElement);
-    const blob = new Blob([source], { type: 'image/svg+xml' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${name}.svg`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
   useEffect(() => {
     fetch(`/icons/${name}.svg`)
       .then(response => response.text())
@@ -54,6 +41,26 @@ const IconPage: React.FC = () => {
     .replace(/<svg/, `<svg id="svg-icon" style="width: ${size}px; height: ${size}px;"`)
     .replace(/stroke-width="[^"]*"/g, `stroke-width="${strokeWidth}"`)
     .replace(/stroke="[^"]*"/g, `stroke="${color}"`);
+
+  const handleDownload = () => {
+    // Espera que o SVG esteja renderizado
+    setTimeout(() => {
+      const svgElement = document.getElementById('svg-icon') as SVGSVGElement | null;
+      if (svgElement) {
+        const serializer = new XMLSerializer();
+        const source = serializer.serializeToString(svgElement);
+        const blob = new Blob([source], { type: 'image/svg+xml' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${name}.svg`;
+        a.click();
+        URL.revokeObjectURL(url);
+      } else {
+        console.error('SVG element not found');
+      }
+    }, 0); // Executa o código após o próximo ciclo de renderização
+  };
 
   return (
     <div>
