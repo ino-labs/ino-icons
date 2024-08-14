@@ -8,7 +8,7 @@ const Home: React.FC = () => {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    fetch('/icons.json')
+    fetch('/assets/icons.json')
       .then(response => response.json())
       .then(data => setIcons(data));
   }, []);

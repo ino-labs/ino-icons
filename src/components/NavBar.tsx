@@ -2,12 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Search from './Search';
 import { useDarkMode } from '../contexts/DarkModeContext';
-import iconSearch from '../../icons/ino-search.svg';
-import iconMenuTwoBars from '../../icons/ino-menu-two-bars.svg';
+import iconSearch from '/assets/icons/ino-search.svg';
+import iconMenuTwoBars from '/assets/icons/ino-menu-two-bars.svg';
 import inoIconsLogo from '/ino-icons-logo.svg';
-import iconSun from '../../icons/ino-sun.svg';
-import iconMoon from '../../icons/ino-moon.svg';
-import iconClose from '../../icons/ino-close.svg';
+import iconSun from '/assets/icons/ino-sun.svg';
+import iconMoon from '/assets/icons/ino-moon.svg';
+import iconClose from '/assets/icons/ino-close.svg';
 
 interface NavBarProps {
   search: string;
@@ -26,7 +26,7 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
   };
 
   useEffect(() => {
-    fetch('/icons.json')
+    fetch('/assets/icons.json')
       .then(response => response.json())
       .then(data => setIcons(data));
   }, []);

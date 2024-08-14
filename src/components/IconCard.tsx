@@ -9,7 +9,7 @@ const IconCard: React.FC<IconCardProps> = ({ name }) => {
   const [svgContent, setSvgContent] = useState<string>('');
 
   useEffect(() => {
-    fetch(`/icons/${name}.svg`)
+    fetch(`/assets/icons/${name}.svg`)
       .then(response => response.text())
       .then(data => setSvgContent(data));
   }, [name]);

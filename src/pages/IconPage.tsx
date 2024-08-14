@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import FooterBar from '../components/FooterBar';
 import { useDarkMode } from '../contexts/DarkModeContext';
-import iconResize from '../../src/images/icon-resize.svg';
-import iconBorder from '../../src/images/icon-border.svg';
-import iconClose from '../../icons/ino-close.svg';
+import iconResize from '../images/icon-resize.svg';
+import iconBorder from '../images/icon-border.svg';
+import iconClose from '/assets/icons/ino-close.svg';
 import { MuiColorInput } from 'mui-color-input';
 
 const IconPage: React.FC = () => {
@@ -21,7 +21,7 @@ const IconPage: React.FC = () => {
   const [color, setColor] = useState(defaultColor);
 
   useEffect(() => {
-    fetch(`/icons/${name}.svg`)
+    fetch(`/assets/icons/${name}.svg`)
       .then(response => response.text())
       .then(data => setSvgContent(data));
   }, [name]);

@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-const iconsDir = path.join(__dirname, '/icons');
-const outputFilePath = path.join(__dirname, 'icons.json');
+const iconsDir = path.join(__dirname, './src/assets/icons');
+const outputFilePath = path.join(__dirname, './assets/icons.json');
 
 fs.readdir(iconsDir, (err, files) => {
   if (err) {
