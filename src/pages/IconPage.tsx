@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import NavBar from '../components/NavBar';
+import FooterBar from '../components/FooterBar';
 import { useDarkMode } from '../contexts/DarkModeContext';
+import iconResize from '../../src/images/icon-resize.svg';
+import iconBorder from '../../src/images/icon-border.svg';
+import iconClose from '../../icons/ino-close.svg';
+import { MuiColorInput } from 'mui-color-input';
 
 const IconPage: React.FC = () => {
   const { name } = useParams<{ name: string }>();
@@ -12,7 +17,8 @@ const IconPage: React.FC = () => {
   const { darkMode } = useDarkMode();
 
   // Define a cor inicial baseada no modo dark
-  const [color, setColor] = useState(darkMode ? '#FFFFFF' : '#000000');
+  const defaultColor = darkMode ? '#FFFFFF' : '#000000';
+  const [color, setColor] = useState(defaultColor);
 
   const handleDownload = () => {
     const svgElement = document.getElementById('svg-icon') as SVGSVGElement;
@@ -38,6 +44,11 @@ const IconPage: React.FC = () => {
     setColor(darkMode ? '#FFFFFF' : '#000000');
   }, [darkMode]);
 
+  // Função para resetar a cor
+  const resetColor = () => {
+    setColor(defaultColor);
+  };
+
   // Atualiza o conteúdo SVG com os novos valores
   const updatedSvgContent = svgContent
     .replace(/<svg/, `<svg id="svg-icon" style="width: ${size}px; height: ${size}px;"`)
@@ -47,41 +58,46 @@ const IconPage: React.FC = () => {
   return (
     <div>
       <NavBar search={search} setSearch={setSearch} />
-      <h1>{name}</h1>
-      <div dangerouslySetInnerHTML={{ __html: updatedSvgContent }} />
-      <div>
-        <label>
-          Size:
-          <input
-            type="range"
-            min="16" 
-            max="200"
-            value={size}
-            onChange={e => setSize(Number(e.target.value))}
-          />
-        </label>
-        <label>
-          Stroke Width:
-          <input
-            type="range"
-            min="1" 
-            max="5"
-            value={strokeWidth}
-            onChange={e => setStrokeWidth(Number(e.target.value))}
-          />
-        </label>
-        <label>
-          Color:
-          <input
-            type="color"
-            value={color}
-            onChange={e => setColor(e.target.value)}
-          />
-        </label>
+      <h1 className='text-center font-bold text-[32px] mt-10 mb-8'>{name}</h1>
+      <div className='icon-preview-container'>
+        <div className="icon-controls">
+          <div className='icon-control'>
+            <img className="icon-control-img" src={iconResize} alt="Size" />
+            <input
+              className='input-range'
+              type="range"
+              min="16" 
+              max="200"
+              value={size}
+              onChange={e => setSize(Number(e.target.value))}
+            />
+            <span>{size}px</span>
+          </div>
+          <div className='icon-control'>
+            <img className="icon-control-img" src={iconBorder} alt="Stroke Width" />
+            <input
+              className='input-range'
+              type="range"
+              min="1" 
+              max="5"
+              value={strokeWidth}
+              onChange={e => setStrokeWidth(Number(e.target.value))}
+            />
+            <span>{strokeWidth}px</span>
+          </div>
+          <div className='icon-control'>
+            <MuiColorInput isAlphaHidden value={color} onChange={setColor} format='hex' />
+            <img className='reset-value' src={iconClose} onClick={resetColor} alt="Reset" />
+          </div>
+          <div className='icon-control'>
+            <button onClick={handleDownload}>
+              Download
+            </button>
+          </div>
+        </div>
+        <div className='icon-preview' dangerouslySetInnerHTML={{ __html: updatedSvgContent }} />
       </div>
-      <button onClick={handleDownload}>
-        Download
-      </button>
+      <FooterBar />
     </div>
   );
 };

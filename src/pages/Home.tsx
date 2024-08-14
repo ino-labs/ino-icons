@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import IconCard from '../components/IconCard';
 import NavBar from '../components/NavBar';
+import FooterBar from '../components/FooterBar';
 
 const Home: React.FC = () => {
   const [icons, setIcons] = useState<string[]>([]);
@@ -12,17 +13,17 @@ const Home: React.FC = () => {
       .then(data => setIcons(data));
   }, []);
 
-  const filteredIcons = icons.filter(icon => icon.includes(search));
 
   return (
     <div>
       <NavBar search={search} setSearch={setSearch} />
-      <h1 className="text-center font-bold text-[32px] mt-10 mb-8">{search ? `INO icons - ${search}` : 'Awesome free SVG icons'}</h1>
+      <h1 className="text-center font-bold text-[32px] mt-10 mb-8">Awesome free SVG icons</h1>
       <div className='icons-list'>
-        {filteredIcons.map(icon => (
+        {icons.map(icon => (
           <IconCard key={icon} name={icon} />
         ))}
       </div>
+      <FooterBar />
     </div>
   );
 };
