@@ -52,7 +52,7 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
     <nav>
       <div className="nav-first-content">
         <div className="nav-menu" onClick={toggleMenu}>
-          <img src={iconMenuTwoBars} alt="" />
+          <img width={24} height={24} src={iconMenuTwoBars} alt="" />
           {showMenu && (
             <div ref={menuRef} className="menu">
               <ul>
@@ -68,7 +68,7 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
         <ul className='nav-title-container'>
           <li className='nav-title'>
             <Link to="/" className='nav-icon-name'>
-              <img src={inoIconsLogo} alt="" />
+              <img height={32} width={32} src={inoIconsLogo} alt="" />
               INO icons
             </Link>
             <span className='nav-icon-version'> v1</span>
@@ -114,10 +114,10 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
             <label className="toggleDarkLabel" arial-label="Toggle dark mode">
               <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
               <div className="toggleDarkIcon sun">
-                <img src={iconSun} alt="" />
+                <img height={16} width={16} src={iconSun} alt="" />
               </div>
               <div className="toggleDarkIcon moon">
-                <img src={iconMoon} alt="" />
+                <img height={16} width={16} src={iconMoon} alt="" />
               </div>
             </label>
           </li>
