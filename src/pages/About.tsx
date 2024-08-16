@@ -9,7 +9,7 @@ const About: React.FC = () => {
   return (
     <div>
       <NavBar search={search} setSearch={setSearch} />
-      <h1 className="text-center font-bold text-[32px] mt-10 mb-8">About INO icons</h1>
+      <h1 className="text-center font-bold text-[32px] sm:mt-5 sm:mb-4 md:mt-10 md:mb-8">About INO icons</h1>
       <div className='about-container'>
         <p><span className='font-extrabold'>INO icons</span> is a free tool that helps you create a library of icons for your projects.
           <ul>

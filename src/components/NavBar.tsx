@@ -77,13 +77,13 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
       </div>
       <div className="nav-second-content">
         <div className="search-container">
-          <img src={iconSearch} alt="icon search" />
+          <img height={24} width={24} src={iconSearch} alt="icon search" />
           <Search search={search} setSearch={setSearch} />
           {showPopup && (
           <div className="popup">
             <div className="popup-content">
               <button className='close-popup' onClick={() => setShowPopup(false)}>
-                <img src={iconClose} alt="Close Search" />
+                <img height={24} width={24} src={iconClose} alt="Close Search" />
               </button>
               <ul>
                 {filteredIcons.length > 0 ? (

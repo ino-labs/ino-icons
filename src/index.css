@@ -449,7 +449,6 @@ input.search-icons::placeholder {
   padding: 4px 16px;
   border-top: 1px solid var(--ino-system-border-color);
   border-bottom: 1px solid var(--ino-system-border-color);
-  margin-top: 64px;
 }
 .footer ul {
   height: 64px;
@@ -536,8 +535,11 @@ input.search-icons::placeholder {
   }
   .footer ul {
     height: auto;
-    flex-direction: column;
-    gap: 16px;
+    gap: 8px;
+    font-size: 12px;
+  }
+  .footer a {
+    font-size: 12px;
   }
   .popup {
     width: calc(100vw - 15px);

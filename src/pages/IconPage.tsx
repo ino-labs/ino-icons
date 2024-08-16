@@ -65,7 +65,7 @@ const IconPage: React.FC = () => {
   return (
     <div>
       <NavBar search={search} setSearch={setSearch} />
-      <h1 className='text-center font-bold text-[32px] mt-10 mb-8'>{name}</h1>
+      <h1 className='text-center font-bold text-[32px] sm:mt-5 sm:mb-4 md:mt-10 md:mb-8'>{name}</h1>
       <div className='icon-preview-container'>
         <div className="icon-controls">
           <div className='icon-control'>

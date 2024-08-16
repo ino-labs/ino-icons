@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <NavBar search={search} setSearch={setSearch} />
-      <h1 className="text-center font-bold text-[32px] mt-10 mb-8">Awesome free SVG icons</h1>
+      <h1 className="text-center font-bold text-[32px] mt-5 mb-4 md:mt-10 md:mb-8">Awesome free SVG icons</h1>
       <div className='icons-list'>
         {icons.map(icon => (
           <IconCard key={icon} name={icon} />
