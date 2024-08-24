@@ -14,9 +14,16 @@ interface NavBarProps {
   setSearch: React.Dispatch<React.SetStateAction<string>>;
 }
 
+interface Icon {
+  id: number;
+  name: string;
+  title: string;
+  keywords: string[];
+}
+
 const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  const [icons, setIcons] = useState<string[]>([]);
+  const [icons, setIcons] = useState<Icon[]>([]);
   const [showPopup, setShowPopup] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -26,7 +33,7 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
   };
 
   useEffect(() => {
-    fetch('/assets/icons.json')
+    fetch('/assets/icons-data.json')
       .then(response => response.json())
       .then(data => setIcons(data));
   }, []);
@@ -39,7 +46,9 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
     }
   }, [search]);
 
-  const filteredIcons = icons.filter(icon => icon.toLowerCase().includes(search.toLowerCase()));
+  const filteredIcons = icons.filter(icon =>
+    icon.keywords.some(keyword => keyword.toLowerCase().includes(search.toLowerCase()))
+  );
 
   const highlightSearchTerm = (name: string, term: string) => {
     const parts = name.split(new RegExp(`(${term})`, 'gi'));
@@ -89,8 +98,8 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
                 {filteredIcons.length > 0 ? (
                   filteredIcons.map((icon, index) => (
                     <li className='search-item' key={index}>
-                      <Link to={`/icon/${icon}`}>
-                        {highlightSearchTerm(icon, search)}
+                      <Link to={`/icon/${icon.name}`}>
+                        {highlightSearchTerm(icon.title, search)}
                       </Link>
                     </li>
                   ))

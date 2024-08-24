@@ -8,6 +8,13 @@ import iconBorder from '../images/icon-border.svg';
 import iconClose from '/assets/icons/ino-close.svg';
 import { MuiColorInput } from 'mui-color-input';
 
+interface Icon {
+  id: number;
+  name: string;
+  title: string;
+  keywords: string[];
+}
+
 const IconPage: React.FC = () => {
   const { name } = useParams<{ name: string }>();
   const [size, setSize] = useState(100);
@@ -15,6 +22,7 @@ const IconPage: React.FC = () => {
   const [svgContent, setSvgContent] = useState<string>('');
   const [search, setSearch] = useState('');
   const { darkMode } = useDarkMode();
+  const [iconTitle, setIconTitle] = useState<string>('');
 
   // Define a cor inicial baseada no modo dark
   const defaultColor = darkMode ? '#FFFFFF' : '#000000';
@@ -24,6 +32,15 @@ const IconPage: React.FC = () => {
     fetch(`/assets/icons/${name}.svg`)
       .then(response => response.text())
       .then(data => setSvgContent(data));
+
+    fetch('/assets/icons-data.json')
+      .then(response => response.json())
+      .then((icons: Icon[]) => {
+        const icon = icons.find(icon => icon.name === name);
+        if (icon) {
+          setIconTitle(icon.title);
+        }
+      });
   }, [name]);
 
   // Atualiza a cor do ícone quando o modo dark muda
@@ -65,7 +82,7 @@ const IconPage: React.FC = () => {
   return (
     <div>
       <NavBar search={search} setSearch={setSearch} />
-      <h1 className='text-center font-bold text-[32px] sm:mt-5 sm:mb-4 md:mt-10 md:mb-8'>{name}</h1>
+      <h1 className='text-center font-bold text-[32px] sm:mt-5 sm:mb-4 md:mt-10 md:mb-8'>INO - {iconTitle}</h1>
       <div className='icon-preview-container'>
         <div className="icon-controls">
           <div className='icon-control'>
