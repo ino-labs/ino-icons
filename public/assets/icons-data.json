@@ -186,16 +186,6 @@
     ]
   },
   {
-    "id": 22,
-    "name": "ino-corner-left-top",
-    "title": "corner left top",
-    "keywords": [
-      "corner",
-      "left",
-      "top"
-    ]
-  },
-  {
     "id": 23,
     "name": "ino-corner-left-up",
     "title": "corner left up",
@@ -216,16 +206,6 @@
     ]
   },
   {
-    "id": 25,
-    "name": "ino-corner-right-top",
-    "title": "corner right top",
-    "keywords": [
-      "corner",
-      "right",
-      "top"
-    ]
-  },
-  {
     "id": 26,
     "name": "ino-corner-right-up",
     "title": "corner right up",
@@ -233,16 +213,6 @@
       "corner",
       "right",
       "up"
-    ]
-  },
-  {
-    "id": 27,
-    "name": "ino-corner-top-right",
-    "title": "corner top right",
-    "keywords": [
-      "corner",
-      "top",
-      "right"
     ]
   },
   {

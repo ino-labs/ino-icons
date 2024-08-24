@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 interface IconCardProps {
   name: string;
+  title: string;
+  keywords: string[];
 }
 
 interface Icon {
@@ -12,7 +14,7 @@ interface Icon {
   keywords: string[];
 }
 
-const IconCard: React.FC<IconCardProps> = ({ name }) => {
+const IconCard: React.FC<IconCardProps> = ({ name, title, keywords }) => {
   const [svgContent, setSvgContent] = useState<string>('');
   const [iconTitle, setIconTitle] = useState<string>('');
 
