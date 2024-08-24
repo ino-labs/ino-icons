@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "icons": "ts-node generateIconsJson.ts",
+    "icons": "node --loader ts-node/esm generateIconsJson.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

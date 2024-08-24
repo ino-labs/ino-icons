@@ -3,228 +3,355 @@
     "id": 1,
     "name": "ino-arrow-down-left",
     "title": "arrow down left",
-    "keywords": ["arrow", "down", "left"]
+    "keywords": [
+      "arrow",
+      "down",
+      "left"
+    ]
   },
   {
     "id": 2,
     "name": "ino-arrow-down-right",
     "title": "arrow down right",
-    "keywords": ["arrow", "down", "right"]
+    "keywords": [
+      "arrow",
+      "down",
+      "right"
+    ]
   },
   {
     "id": 3,
     "name": "ino-arrow-down",
     "title": "arrow down",
-    "keywords": ["arrow", "down"]
+    "keywords": [
+      "arrow",
+      "down"
+    ]
   },
   {
     "id": 4,
     "name": "ino-arrow-left",
     "title": "arrow left",
-    "keywords": ["arrow", "left"]
+    "keywords": [
+      "arrow",
+      "left"
+    ]
   },
   {
     "id": 5,
     "name": "ino-arrow-right",
     "title": "arrow right",
-    "keywords": ["arrow", "right"]
+    "keywords": [
+      "arrow",
+      "right"
+    ]
   },
   {
     "id": 6,
     "name": "ino-arrow-up-left",
     "title": "arrow up left",
-    "keywords": ["arrow", "up", "left"]
+    "keywords": [
+      "arrow",
+      "up",
+      "left"
+    ]
   },
   {
     "id": 7,
     "name": "ino-arrow-up-right",
     "title": "arrow up right",
-    "keywords": ["arrow", "up", "right"]
+    "keywords": [
+      "arrow",
+      "up",
+      "right"
+    ]
   },
   {
     "id": 8,
     "name": "ino-arrow-up",
     "title": "arrow up",
-    "keywords": ["arrow", "up"]
+    "keywords": [
+      "arrow",
+      "up"
+    ]
   },
   {
     "id": 9,
     "name": "ino-chevron-down",
     "title": "chevron down",
-    "keywords": ["chevron", "down"]
+    "keywords": [
+      "chevron",
+      "down"
+    ]
   },
   {
     "id": 10,
     "name": "ino-chevron-left",
     "title": "chevron left",
-    "keywords": ["chevron", "left"]
+    "keywords": [
+      "chevron",
+      "left"
+    ]
   },
   {
     "id": 11,
     "name": "ino-chevron-right",
     "title": "chevron right",
-    "keywords": ["chevron", "right"]
+    "keywords": [
+      "chevron",
+      "right"
+    ]
   },
   {
     "id": 12,
     "name": "ino-chevron-up",
     "title": "chevron up",
-    "keywords": ["chevron", "up"]
+    "keywords": [
+      "chevron",
+      "up"
+    ]
   },
   {
     "id": 13,
     "name": "ino-chevrons-down",
     "title": "chevrons down",
-    "keywords": ["chevrons", "down"]
+    "keywords": [
+      "chevrons",
+      "down"
+    ]
   },
   {
     "id": 14,
     "name": "ino-chevrons-left",
     "title": "chevrons left",
-    "keywords": ["chevrons", "left"]
+    "keywords": [
+      "chevrons",
+      "left"
+    ]
   },
   {
     "id": 15,
     "name": "ino-chevrons-right",
     "title": "chevrons right",
-    "keywords": ["chevrons", "right"]
+    "keywords": [
+      "chevrons",
+      "right"
+    ]
   },
   {
     "id": 16,
     "name": "ino-chevrons-up",
     "title": "chevrons up",
-    "keywords": ["chevrons", "up"]
+    "keywords": [
+      "chevrons",
+      "up"
+    ]
   },
   {
     "id": 17,
     "name": "ino-close",
     "title": "close",
-    "keywords": ["close"]
+    "keywords": [
+      "close"
+    ]
   },
   {
     "id": 18,
     "name": "ino-corner-down-left",
     "title": "corner down left",
-    "keywords": ["corner", "down", "left"]
+    "keywords": [
+      "corner",
+      "down",
+      "left"
+    ]
   },
   {
     "id": 20,
     "name": "ino-corner-down-right",
     "title": "corner down right",
-    "keywords": ["corner", "down", "right"]
+    "keywords": [
+      "corner",
+      "down",
+      "right"
+    ]
   },
   {
     "id": 21,
     "name": "ino-corner-left-down",
     "title": "corner left down",
-    "keywords": ["corner", "left", "down"]
+    "keywords": [
+      "corner",
+      "left",
+      "down"
+    ]
   },
   {
     "id": 22,
     "name": "ino-corner-left-top",
     "title": "corner left top",
-    "keywords": ["corner", "left", "top"]
+    "keywords": [
+      "corner",
+      "left",
+      "top"
+    ]
   },
   {
     "id": 23,
     "name": "ino-corner-left-up",
     "title": "corner left up",
-    "keywords": ["corner", "left", "up"]
+    "keywords": [
+      "corner",
+      "left",
+      "up"
+    ]
   },
   {
     "id": 24,
     "name": "ino-corner-right-down",
     "title": "corner right down",
-    "keywords": ["corner", "right", "down"]
+    "keywords": [
+      "corner",
+      "right",
+      "down"
+    ]
   },
   {
     "id": 25,
     "name": "ino-corner-right-top",
     "title": "corner right top",
-    "keywords": ["corner", "right", "top"]
+    "keywords": [
+      "corner",
+      "right",
+      "top"
+    ]
   },
   {
     "id": 26,
     "name": "ino-corner-right-up",
     "title": "corner right up",
-    "keywords": ["corner", "right", "up"]
+    "keywords": [
+      "corner",
+      "right",
+      "up"
+    ]
   },
   {
     "id": 27,
     "name": "ino-corner-top-right",
     "title": "corner top right",
-    "keywords": ["corner", "top", "right"]
+    "keywords": [
+      "corner",
+      "top",
+      "right"
+    ]
   },
   {
     "id": 28,
     "name": "ino-corner-up-left",
     "title": "corner up left",
-    "keywords": ["corner", "up", "left"]
+    "keywords": [
+      "corner",
+      "up",
+      "left"
+    ]
   },
   {
     "id": 29,
     "name": "ino-corner-up-right",
     "title": "corner up right",
-    "keywords": ["corner", "up", "right"]
+    "keywords": [
+      "corner",
+      "up",
+      "right"
+    ]
   },
   {
     "id": 30,
     "name": "ino-menu-three-bars",
     "title": "menu three bars",
-    "keywords": ["menu", "three", "bars"]
+    "keywords": [
+      "menu",
+      "three",
+      "bars"
+    ]
   },
   {
     "id": 31,
     "name": "ino-menu-two-bars",
     "title": "menu two bars",
-    "keywords": ["menu", "two", "bars"]
+    "keywords": [
+      "menu",
+      "two",
+      "bars"
+    ]
   },
   {
     "id": 32,
     "name": "ino-moon",
     "title": "moon",
-    "keywords": ["moon"]
+    "keywords": [
+      "moon"
+    ]
   },
   {
     "id": 33,
     "name": "ino-more-horizontal",
     "title": "more horizontal",
-    "keywords": ["more", "horizontal"]
+    "keywords": [
+      "more",
+      "horizontal"
+    ]
   },
   {
     "id": 34,
     "name": "ino-more-vertical",
     "title": "more vertical",
-    "keywords": ["more", "vertical"]
+    "keywords": [
+      "more",
+      "vertical"
+    ]
   },
   {
     "id": 35,
     "name": "ino-palette",
     "title": "palette",
-    "keywords": ["palette"]
+    "keywords": [
+      "palette"
+    ]
   },
   {
     "id": 36,
     "name": "ino-refresh-ccw",
     "title": "refresh ccw",
-    "keywords": ["refresh", "ccw"]
+    "keywords": [
+      "refresh",
+      "ccw"
+    ]
   },
   {
     "id": 37,
     "name": "ino-refresh-cw",
     "title": "refresh cw",
-    "keywords": ["refresh", "cw"]
+    "keywords": [
+      "refresh",
+      "cw"
+    ]
   },
   {
     "id": 38,
     "name": "ino-search",
     "title": "search",
-    "keywords": ["search"]
+    "keywords": [
+      "search"
+    ]
   },
   {
-    "id": 39,
+    "id": 75,
     "name": "ino-sun",
     "title": "sun",
-    "keywords": ["sun"]
+    "keywords": [
+      "ino",
+      "sun"
+    ]
   }
 ]

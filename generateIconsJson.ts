@@ -1,10 +1,13 @@
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 
-const iconsDir = path.join(__dirname, './assets/icons');
-const outputFilePath = path.join(__dirname, './assets/icons-data.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Função para ler o arquivo JSON existente
+const iconsDir = path.join(__dirname, './public/assets/icons');
+const outputFilePath = path.join(__dirname, './public/assets/icons-data.json');
+
 const readExistingIcons = (): any[] => {
   if (fs.existsSync(outputFilePath)) {
     const data = fs.readFileSync(outputFilePath, 'utf-8');
@@ -13,7 +16,6 @@ const readExistingIcons = (): any[] => {
   return [];
 };
 
-// Função para verificar se um ícone já existe
 const iconExists = (existingIcons: any[], name: string): boolean => {
   return existingIcons.some(icon => icon.name === name);
 };
@@ -27,7 +29,6 @@ fs.readdir(iconsDir, (err, files) => {
   const existingIcons = readExistingIcons();
   const currentIconNames = files.map(file => path.parse(file).name);
 
-  // Identificar ícones novos
   const newIcons = files
     .map((file, index) => {
       const name = path.parse(file).name;
@@ -43,7 +44,6 @@ fs.readdir(iconsDir, (err, files) => {
     })
     .filter(icon => !iconExists(existingIcons, icon.name));
 
-  // Identificar ícones removidos
   const removedIcons = existingIcons.filter(icon => !currentIconNames.includes(icon.name));
 
   if (newIcons.length > 0 || removedIcons.length > 0) {
