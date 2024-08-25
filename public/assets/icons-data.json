@@ -323,5 +323,567 @@
       "ino",
       "sun"
     ]
+  },
+  {
+    "id": 36,
+    "name": "ino-arrow-back-up",
+    "title": "arrow back up",
+    "keywords": [
+      "ino",
+      "arrow",
+      "back",
+      "up"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "ino-arrow-circle-down-left",
+    "title": "arrow circle down left",
+    "keywords": [
+      "ino",
+      "arrow",
+      "circle",
+      "down",
+      "left"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "ino-arrow-circle-down-right",
+    "title": "arrow circle down right",
+    "keywords": [
+      "ino",
+      "arrow",
+      "circle",
+      "down",
+      "right"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "ino-arrow-circle-down",
+    "title": "arrow circle down",
+    "keywords": [
+      "ino",
+      "arrow",
+      "circle",
+      "down"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "ino-arrow-circle-left",
+    "title": "arrow circle left",
+    "keywords": [
+      "ino",
+      "arrow",
+      "circle",
+      "left"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "ino-arrow-circle-right",
+    "title": "arrow circle right",
+    "keywords": [
+      "ino",
+      "arrow",
+      "circle",
+      "right"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "ino-arrow-circle-up-left",
+    "title": "arrow circle up left",
+    "keywords": [
+      "ino",
+      "arrow",
+      "circle",
+      "up",
+      "left"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "ino-arrow-circle-up-right",
+    "title": "arrow circle up right",
+    "keywords": [
+      "ino",
+      "arrow",
+      "circle",
+      "up",
+      "right"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "ino-arrow-forward",
+    "title": "arrow forward",
+    "keywords": [
+      "ino",
+      "arrow",
+      "forward"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "ino-arrow-git-merge",
+    "title": "arrow git merge",
+    "keywords": [
+      "ino",
+      "arrow",
+      "git",
+      "merge"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "ino-arrow-join",
+    "title": "arrow join",
+    "keywords": [
+      "ino",
+      "arrow",
+      "join"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "ino-arrow-merge-left",
+    "title": "arrow merge left",
+    "keywords": [
+      "ino",
+      "arrow",
+      "merge",
+      "left"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "ino-arrow-merge-right",
+    "title": "arrow merge right",
+    "keywords": [
+      "ino",
+      "arrow",
+      "merge",
+      "right"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "ino-arrow-merge",
+    "title": "arrow merge",
+    "keywords": [
+      "ino",
+      "arrow",
+      "merge"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "ino-arrow-pull-down",
+    "title": "arrow pull down",
+    "keywords": [
+      "ino",
+      "arrow",
+      "pull",
+      "down"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "ino-arrow-pull-left",
+    "title": "arrow pull left",
+    "keywords": [
+      "ino",
+      "arrow",
+      "pull",
+      "left"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "ino-arrow-pull-right",
+    "title": "arrow pull right",
+    "keywords": [
+      "ino",
+      "arrow",
+      "pull",
+      "right"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "ino-arrow-pull-up",
+    "title": "arrow pull up",
+    "keywords": [
+      "ino",
+      "arrow",
+      "pull",
+      "up"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "ino-arrow-push-down",
+    "title": "arrow push down",
+    "keywords": [
+      "ino",
+      "arrow",
+      "push",
+      "down"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "ino-arrow-push-left",
+    "title": "arrow push left",
+    "keywords": [
+      "ino",
+      "arrow",
+      "push",
+      "left"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "ino-arrow-push-right",
+    "title": "arrow push right",
+    "keywords": [
+      "ino",
+      "arrow",
+      "push",
+      "right"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "ino-arrow-push-up",
+    "title": "arrow push up",
+    "keywords": [
+      "ino",
+      "arrow",
+      "push",
+      "up"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "ino-arrow-up-right-share",
+    "title": "arrow up right share",
+    "keywords": [
+      "ino",
+      "arrow",
+      "up",
+      "right",
+      "share"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "ino-arrows-col-resize",
+    "title": "arrows col resize",
+    "keywords": [
+      "ino",
+      "arrows",
+      "col",
+      "resize"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "ino-arrows-diagonal",
+    "title": "arrows diagonal",
+    "keywords": [
+      "ino",
+      "arrows",
+      "diagonal"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "ino-arrows-down-up",
+    "title": "arrows down up",
+    "keywords": [
+      "ino",
+      "arrows",
+      "down",
+      "up"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "ino-arrows-down",
+    "title": "arrows down",
+    "keywords": [
+      "ino",
+      "arrows",
+      "down"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "ino-arrows-git-diff",
+    "title": "arrows git diff",
+    "keywords": [
+      "ino",
+      "arrows",
+      "git",
+      "diff"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "ino-arrows-horizontal",
+    "title": "arrows horizontal",
+    "keywords": [
+      "ino",
+      "arrows",
+      "horizontal"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "ino-arrows-left-right",
+    "title": "arrows left right",
+    "keywords": [
+      "ino",
+      "arrows",
+      "left",
+      "right"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "ino-arrows-left",
+    "title": "arrows left",
+    "keywords": [
+      "ino",
+      "arrows",
+      "left"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "ino-arrows-maximize",
+    "title": "arrows maximize",
+    "keywords": [
+      "ino",
+      "arrows",
+      "maximize"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "ino-arrows-minimize",
+    "title": "arrows minimize",
+    "keywords": [
+      "ino",
+      "arrows",
+      "minimize"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "ino-arrows-right-left",
+    "title": "arrows right left",
+    "keywords": [
+      "ino",
+      "arrows",
+      "right",
+      "left"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "ino-arrows-right",
+    "title": "arrows right",
+    "keywords": [
+      "ino",
+      "arrows",
+      "right"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "ino-arrows-row-resize",
+    "title": "arrows row resize",
+    "keywords": [
+      "ino",
+      "arrows",
+      "row",
+      "resize"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "ino-arrows-shuffle",
+    "title": "arrows shuffle",
+    "keywords": [
+      "ino",
+      "arrows",
+      "shuffle"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "ino-arrows-split",
+    "title": "arrows split",
+    "keywords": [
+      "ino",
+      "arrows",
+      "split"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "ino-arrows-up-down",
+    "title": "arrows up down",
+    "keywords": [
+      "ino",
+      "arrows",
+      "up",
+      "down"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "ino-arrows-up",
+    "title": "arrows up",
+    "keywords": [
+      "ino",
+      "arrows",
+      "up"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "ino-arrows-vertical",
+    "title": "arrows vertical",
+    "keywords": [
+      "ino",
+      "arrows",
+      "vertical"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "ino-corner-down-left-up",
+    "title": "corner down left up",
+    "keywords": [
+      "ino",
+      "corner",
+      "down",
+      "left",
+      "up"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "ino-corner-down-right-up",
+    "title": "corner down right up",
+    "keywords": [
+      "ino",
+      "corner",
+      "down",
+      "right",
+      "up"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "ino-corner-up-left-down",
+    "title": "corner up left down",
+    "keywords": [
+      "ino",
+      "corner",
+      "up",
+      "left",
+      "down"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "ino-corner-up-right-down",
+    "title": "corner up right down",
+    "keywords": [
+      "ino",
+      "corner",
+      "up",
+      "right",
+      "down"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "ino-download-arrow-down",
+    "title": "download arrow down",
+    "keywords": [
+      "ino",
+      "download",
+      "arrow",
+      "down"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "ino-git-branch",
+    "title": "git branch",
+    "keywords": [
+      "ino",
+      "git",
+      "branch"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "ino-git-commit",
+    "title": "git commit",
+    "keywords": [
+      "ino",
+      "git",
+      "commit"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "ino-git-fetch",
+    "title": "git fetch",
+    "keywords": [
+      "ino",
+      "git",
+      "fetch"
+    ]
+  },
+  {
+    "id": 110,
+    "name": "ino-git-pull",
+    "title": "git pull",
+    "keywords": [
+      "ino",
+      "git",
+      "pull"
+    ]
+  },
+  {
+    "id": 111,
+    "name": "ino-git-push",
+    "title": "git push",
+    "keywords": [
+      "ino",
+      "git",
+      "push"
+    ]
+  },
+  {
+    "id": 122,
+    "name": "ino-upload-arrow-up",
+    "title": "upload arrow up",
+    "keywords": [
+      "ino",
+      "upload",
+      "arrow",
+      "up"
+    ]
   }
 ]
