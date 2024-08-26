@@ -103,7 +103,8 @@ const IconPage: React.FC = () => {
               className='input-range'
               type="range"
               min="1" 
-              max="5"
+              max="2"
+              step={0.25}
               value={strokeWidth}
               onChange={e => setStrokeWidth(Number(e.target.value))}
             />
