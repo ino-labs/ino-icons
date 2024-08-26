@@ -20,7 +20,7 @@ const About: React.FC = () => {
         </p>
         <p className='about-title font-extrabold text-center'>Creator</p>
         <p>Ewerton Nepomuceno (<Link to="https://www.behance.net/n3pu" target="_blank" rel="noopener noreferrer">n3pu</Link>), a Brazilian designer with more than 12 years of experience in the Technology area, working in UX/UI, Front-end development and Design Systems.</p>
-        <p>Made with Figma, lots of love and coffee.
+        <p>Made with Figma, lots of love and coffee.<br />
         Support by <Link to="https://buymeacoffee.com/n3pu" target="_blank" rel="noopener noreferrer">buying me a coffee</Link> or <Link to="https://www.paypal.com/donate/?business=CJPN8GQVW32UU&amount=5&no_recurring=0&item_name=Support+me+if+you+think+I%27ve+given+you+good+results&currency_code=USD" target="_blank" rel="noopener noreferrer">donate</Link></p>
       </div>
       <FooterBar />
