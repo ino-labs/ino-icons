@@ -885,5 +885,80 @@
       "arrow",
       "up"
     ]
+  },
+  {
+    "id": 164,
+    "name": "ino-internet-router-off",
+    "title": "internet router off",
+    "keywords": [
+      "ino",
+      "internet",
+      "router",
+      "off"
+    ]
+  },
+  {
+    "id": 165,
+    "name": "ino-internet-router",
+    "title": "internet router",
+    "keywords": [
+      "ino",
+      "internet",
+      "router"
+    ]
+  },
+  {
+    "id": 166,
+    "name": "ino-internet-wifi-0",
+    "title": "internet wifi 0",
+    "keywords": [
+      "ino",
+      "internet",
+      "wifi",
+      "0"
+    ]
+  },
+  {
+    "id": 167,
+    "name": "ino-internet-wifi-1",
+    "title": "internet wifi 1",
+    "keywords": [
+      "ino",
+      "internet",
+      "wifi",
+      "1"
+    ]
+  },
+  {
+    "id": 168,
+    "name": "ino-internet-wifi-2",
+    "title": "internet wifi 2",
+    "keywords": [
+      "ino",
+      "internet",
+      "wifi",
+      "2"
+    ]
+  },
+  {
+    "id": 169,
+    "name": "ino-internet-wifi-off",
+    "title": "internet wifi off",
+    "keywords": [
+      "ino",
+      "internet",
+      "wifi",
+      "off"
+    ]
+  },
+  {
+    "id": 170,
+    "name": "ino-internet-wifi",
+    "title": "internet wifi",
+    "keywords": [
+      "ino",
+      "internet",
+      "wifi"
+    ]
   }
 ]
