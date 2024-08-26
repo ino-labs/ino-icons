@@ -11,7 +11,7 @@ const About: React.FC = () => {
       <NavBar search={search} setSearch={setSearch} />
       <h1 className="text-center font-bold text-[32px] sm:mt-5 sm:mb-4 md:mt-10 md:mb-8">About INO icons</h1>
       <div className='about-container'>
-        <p><span className='font-extrabold'>INO icons</span> is a free tool that helps you create a library of icons for your projects.
+        <p><span className='font-extrabold'>INO icons</span> is a free tool that helps you create a library of svg icons for your projects.
           <ul>
             <li>1 - Browse or search for different icons</li>
             <li>2 - Customize your icons such as size, border width and color.</li>
