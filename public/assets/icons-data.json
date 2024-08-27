@@ -960,5 +960,60 @@
       "internet",
       "wifi"
     ]
+  },
+  {
+    "id": 166,
+    "name": "ino-edit",
+    "title": "edit",
+    "keywords": [
+      "ino",
+      "edit"
+    ]
+  },
+  {
+    "id": 167,
+    "name": "ino-eraser",
+    "title": "eraser",
+    "keywords": [
+      "ino",
+      "eraser"
+    ]
+  },
+  {
+    "id": 180,
+    "name": "ino-layout-dashboard",
+    "title": "layout dashboard",
+    "keywords": [
+      "ino",
+      "layout",
+      "dashboard"
+    ]
+  },
+  {
+    "id": 181,
+    "name": "ino-mail",
+    "title": "mail",
+    "keywords": [
+      "ino",
+      "mail"
+    ]
+  },
+  {
+    "id": 191,
+    "name": "ino-star",
+    "title": "star",
+    "keywords": [
+      "ino",
+      "star"
+    ]
+  },
+  {
+    "id": 193,
+    "name": "ino-trash",
+    "title": "trash",
+    "keywords": [
+      "ino",
+      "trash"
+    ]
   }
 ]
