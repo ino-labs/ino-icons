@@ -14,7 +14,7 @@ interface Icon {
   keywords: string[];
 }
 
-const IconCard: React.FC<IconCardProps> = ({ name, title, keywords }) => {
+const IconCard: React.FC<IconCardProps> = ({ name }) => {
   const [svgContent, setSvgContent] = useState<string>('');
   const [iconTitle, setIconTitle] = useState<string>('');
 
