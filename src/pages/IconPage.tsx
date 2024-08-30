@@ -6,6 +6,8 @@ import { useDarkMode } from '../contexts/DarkModeContext';
 import iconResize from '../images/icon-resize.svg';
 import iconBorder from '../images/icon-border.svg';
 import iconClose from '/assets/icons/ino-close.svg';
+import iconCopy from '/assets/icons/ino-copy.svg';
+import iconDownload from '/assets/icons/ino-download-arrow-down.svg';
 import { MuiColorInput } from 'mui-color-input';
 
 interface Icon {
@@ -23,12 +25,14 @@ const IconPage: React.FC = () => {
   const [search, setSearch] = useState('');
   const { darkMode } = useDarkMode();
   const [iconTitle, setIconTitle] = useState<string>('');
+  const [keywords, setKeywords] = useState<string[]>([]); // Adicionando state para keywords
 
   // Define a cor inicial baseada no modo dark
   const defaultColor = darkMode ? '#FFFFFF' : '#000000';
   const [color, setColor] = useState(defaultColor);
 
   useEffect(() => {
+    // Carrega o conteúdo SVG e os dados do ícone
     fetch(`/assets/icons/${name}.svg`)
       .then(response => response.text())
       .then(data => setSvgContent(data));
@@ -39,6 +43,7 @@ const IconPage: React.FC = () => {
         const icon = icons.find(icon => icon.name === name);
         if (icon) {
           setIconTitle(icon.title);
+          setKeywords(icon.keywords); // Define as keywords do ícone
         }
       });
   }, [name]);
@@ -51,6 +56,13 @@ const IconPage: React.FC = () => {
   // Função para resetar a cor
   const resetColor = () => {
     setColor(defaultColor);
+  };
+
+  // Função para copiar o código SVG para a área de transferência
+  const handleCopy = () => {
+    navigator.clipboard.writeText(updatedSvgContent)
+      .then(() => alert('SVG code copied to clipboard!'))
+      .catch(err => console.error('Failed to copy SVG:', err));
   };
 
   // Atualiza o conteúdo SVG com os novos valores
@@ -81,47 +93,74 @@ const IconPage: React.FC = () => {
 
   return (
     <div>
-      <NavBar search={search} setSearch={setSearch} />
-      <h1 className='text-center font-bold text-[32px] sm:mt-5 sm:mb-4 md:mt-10 md:mb-8'>INO - {iconTitle}</h1>
+      <NavBar />
+      <div className="icon-page-header px-4 pb-4">
+        <h1 className='text-left font-bold text-[24px] sm:mt-4 sm:mb-1 md:mt-8 md:mb-2'>INO - {iconTitle}</h1>
+        {/* Exibe as tags com as keywords do ícone */}
+        <div className='icon-keywords'>
+          {keywords.map((keyword, index) => (
+            <span key={index} className='icon-tag'>{keyword}</span>
+          ))}
+        </div>
+      </div>
+      
       <div className='icon-preview-container'>
+        <div className='icon-preview' dangerouslySetInnerHTML={{ __html: updatedSvgContent }} />
         <div className="icon-controls">
-          <div className='icon-control'>
-            <img className="icon-control-img" src={iconResize} alt="Size" />
-            <input
-              className='input-range'
-              type="range"
-              min="16" 
-              max="200"
-              value={size}
-              onChange={e => setSize(Number(e.target.value))}
-            />
-            <span>{size}px</span>
+          <div className="icon-controls-toolbar">
+            <div className='icon-control'>
+              <button onClick={handleDownload}>
+                <img src={iconDownload} alt="Download SVG" />                SVG
+              </button>
+            </div>
+            <div className='icon-control'>
+              <img className="icon-control-img" src={iconResize} alt="Size" />
+              <input
+                className='input-range'
+                type="range"
+                min="16" 
+                max="200"
+                value={size}
+                onChange={e => setSize(Number(e.target.value))}
+              />
+              <span>{size}px</span>
+            </div>
+            <div className='icon-control'>
+              <img className="icon-control-img" src={iconBorder} alt="Stroke Width" />
+              <input
+                className='input-range'
+                type="range"
+                min="1" 
+                max="2"
+                step={0.25}
+                value={strokeWidth}
+                onChange={e => setStrokeWidth(Number(e.target.value))}
+              />
+              <span>{strokeWidth}px</span>
+            </div>
+            <div className='icon-control'>
+              <MuiColorInput isAlphaHidden value={color} onChange={setColor} format='hex' />
+              <img className='reset-value' src={iconClose} onClick={resetColor} alt="Reset" />
+            </div>
           </div>
-          <div className='icon-control'>
-            <img className="icon-control-img" src={iconBorder} alt="Stroke Width" />
-            <input
-              className='input-range'
-              type="range"
-              min="1" 
-              max="2"
-              step={0.25}
-              value={strokeWidth}
-              onChange={e => setStrokeWidth(Number(e.target.value))}
-            />
-            <span>{strokeWidth}px</span>
-          </div>
-          <div className='icon-control'>
-            <MuiColorInput isAlphaHidden value={color} onChange={setColor} format='hex' />
-            <img className='reset-value' src={iconClose} onClick={resetColor} alt="Reset" />
-          </div>
-          <div className='icon-control'>
-            <button onClick={handleDownload}>
-              Download
-            </button>
+          <div className="tabs-container">
+            <div className="tabs-container-title mx-4 mt-2">
+              <h3>SVG Code:</h3>
+            </div>
+            <div className='code-container'>
+              <div className="pre-code-container">
+                <pre>{updatedSvgContent}</pre>
+              </div>
+              <button className='code-copy' onClick={handleCopy}>
+                <img className='filter-invert-0' src={iconCopy} title="copy svg" alt="copy svg" />
+              </button>
+            </div>
           </div>
         </div>
-        <div className='icon-preview' dangerouslySetInnerHTML={{ __html: updatedSvgContent }} />
       </div>
+
+      
+
       <FooterBar />
     </div>
   );

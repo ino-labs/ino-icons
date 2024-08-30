@@ -1,17 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import Search from './Search';
 import { useDarkMode } from '../contexts/DarkModeContext';
-import iconSearch from '/assets/icons/ino-search.svg';
 import iconMenuTwoBars from '/assets/icons/ino-menu-two-bars.svg';
 import inoIconsLogo from '/ino-icons-logo.svg';
 import iconSun from '/assets/icons/ino-sun.svg';
 import iconMoon from '/assets/icons/ino-moon.svg';
-import iconClose from '/assets/icons/ino-close.svg';
 
 interface NavBarProps {
-  search: string;
-  setSearch: React.Dispatch<React.SetStateAction<string>>;
+  
 }
 
 interface Icon {
@@ -21,10 +17,8 @@ interface Icon {
   keywords: string[];
 }
 
-const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
+const NavBar: React.FC<NavBarProps> = () => {
   const { darkMode, toggleDarkMode } = useDarkMode();
-  const [icons, setIcons] = useState<Icon[]>([]);
-  const [showPopup, setShowPopup] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
@@ -32,30 +26,6 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
     setShowMenu(!showMenu);
   };
 
-  useEffect(() => {
-    fetch('/assets/icons-data.json')
-      .then(response => response.json())
-      .then(data => setIcons(data));
-  }, []);
-
-  useEffect(() => {
-    if (search) {
-      setShowPopup(true);
-    } else {
-      setShowPopup(false);
-    }
-  }, [search]);
-
-  const filteredIcons = icons.filter(icon =>
-    icon.keywords.some(keyword => keyword.toLowerCase().includes(search.toLowerCase()))
-  );
-
-  const highlightSearchTerm = (name: string, term: string) => {
-    const parts = name.split(new RegExp(`(${term})`, 'gi'));
-    return parts.map((part, index) =>
-      part.toLowerCase() === term.toLowerCase() ? <strong key={index}>{part}</strong> : part
-    );
-  };
 
   return (
     <nav>
@@ -85,32 +55,7 @@ const NavBar: React.FC<NavBarProps> = ({ search, setSearch }) => {
         </ul>
       </div>
       <div className="nav-second-content">
-        <div className="search-container">
-          <img height={24} width={24} src={iconSearch} alt="icon search" />
-          <Search search={search} setSearch={setSearch} />
-          {showPopup && (
-          <div className="popup">
-            <div className="popup-content">
-              <button className='close-popup' onClick={() => setShowPopup(false)}>
-                <img height={24} width={24} src={iconClose} alt="Close Search" />
-              </button>
-              <ul>
-                {filteredIcons.length > 0 ? (
-                  filteredIcons.map((icon, index) => (
-                    <li className='search-item' key={index}>
-                      <Link to={`/icon/${icon.name}`}>
-                        {highlightSearchTerm(icon.title, search)}
-                      </Link>
-                    </li>
-                  ))
-                ) : (
-                  <li>No icon found =(</li>
-                )}
-              </ul>
-            </div>
-          </div>
-        )}
-        </div>
+        
         <ul className='dark-donate-container'>
           <li><Link className='link' to="https://buymeacoffee.com/n3pu" target="_blank" rel="noopener noreferrer">Buy me a coffee</Link></li>
           <li>or</li>

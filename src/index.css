@@ -26,6 +26,7 @@ body {
   --ino-system-icon-card-color: var(--ino-color-black);
   --ino-system-icon-card-color-hover: var(--ino-color-white);
   --ino-system-preview-grid-url: url('./images/grid-lines.svg');
+  --ino-color-filter: 1;
   --ino-color-filter-invert: 0;
   --ino-overlay-border-color: var(--ino-color-black);
 }
@@ -44,8 +45,16 @@ body.dark-mode {
   --ino-system-icon-card-color: var(--ino-color-white);
   --ino-system-icon-card-color-hover: var(--ino-color-black);
   --ino-system-preview-grid-url: url('./images/grid-lines-dark.svg');
+  --ino-color-filter: 0;
   --ino-color-filter-invert: 1;
   --ino-overlay-border-color: var(--ino-color-white);
+}
+
+.filter-invert-0 {
+  filter: invert(var(--ino-color-filter-invert));
+}
+.filter-invert-1 {
+  filter: invert(var(--ino-color-filter));
 }
 
 nav {
@@ -77,6 +86,7 @@ input.search-icons::placeholder {
 
 .nav-title {
   display: flex;
+  flex: 1;
   align-items: center;
   height: 64px;
   border-right: 1px solid var(--ino-system-border-color);
@@ -137,7 +147,8 @@ input.search-icons::placeholder {
   height: 64px;
   padding: 4px 16px;
   gap: 4px;
-  border-right: 1px solid var(--ino-system-border-color);
+  border: 1px solid var(--ino-system-border-color);
+  border-bottom: none;
 }
 .search-container img {
   filter: invert(var(--ino-color-filter-invert));
@@ -194,7 +205,7 @@ input.search-icons::placeholder {
 .icons-list {
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   border-top: 1px solid var(--ino-system-border-color);
   border-left: 1px solid var(--ino-system-border-color);
 }
@@ -324,50 +335,71 @@ input.search-icons::placeholder {
   display: flex;
   flex-direction: column;
   border-right: 1px solid var(--ino-system-border-color);
-  width: 410px;
+  flex: 1;
 }
-.icon-controls .icon-control {
-  height: 80px;
-  padding: 8px 16px;
+.icon-controls-toolbar {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  height: auto;
+  border-bottom: 1px solid var(--ino-system-border-color);
 }
 .icon-controls .icon-control {
   width: 100%;
+  height: 48px;
+  padding: 8px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+.icon-controls .icon-control:first-child {
+  width: auto;
+  flex-grow: 0;
 }
 .icon-controls .icon-control:not(:last-child) {
-  border-bottom: 1px solid var(--ino-system-border-color);
+  border-right: 1px solid var(--ino-system-border-color);
 }
 .icon-controls .icon-control button {
   background-color: var(--ino-system-label-color);
   color: var(--ino-system-label-color-inverse);
-  width: 100%;
-  padding: 12px;
+  width: auto;
+  padding: 8px 12px;
   text-align: center;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 700;
   border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: max-content;
+}
+.icon-controls .icon-control button img {
+  width: 20px;
+  height: 20px;
+  filter: invert(var(--ino-color-filter));
 }
 .icon-controls .icon-control span {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
 }
 .icon-preview {
+  width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
   background-image: var(--ino-system-preview-grid-url);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
+  border-right: 1px solid var(--ino-system-border-color);
 }
 .icon-preview svg {
   border: 1px solid var(--ino-system-border-color);
 }
 .icon-control-img {
   filter: invert(var(--ino-color-filter-invert));
+  width: 20px;
+  height: 20px;
 }
 
 /* The range itself */
@@ -410,6 +442,8 @@ input.search-icons::placeholder {
 .reset-value {
   cursor: pointer;
   filter: invert(var(--ino-color-filter-invert));
+  width: 20px;
+  height: 20px;
 }
 .MuiColorInput-TextField {
   width: 100%;
@@ -423,12 +457,16 @@ input.search-icons::placeholder {
   color: var(--ino-system-label-color);
   border: 1px solid var(--ino-system-label-color) !important;
   border-radius: 4px;
+  padding: 4px 8px;
 }
 .MuiInputBase-root {
   padding-left: 0 !important;
 }
 .MuiInputBase-root button {
   border-radius: 0 !important;
+  width: 20px !important;
+  height: 20px;
+  padding: 10px !important;
 }
 .MuiInputBase-root .MuiOutlinedInput-notchedOutline {
   border: none !important;
@@ -474,12 +512,75 @@ input.search-icons::placeholder {
   text-decoration: underline;
 }
 
+.nav-first-content {
+  flex: 1;
+}
 .nav-first-content,
 .nav-second-content {
   display: flex;
 }
 .nav-second-content {
-  flex: 1;
+  /* flex: 1; */
+}
+.icon-keywords {
+  display: flex;
+  gap: 4px;
+}
+.icon-tag {
+  border: 1px solid var(--ino-system-label-color);
+  color: var(--ino-system-label-color);
+  padding: 0 4px;
+  height: 16px;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 16px;
+}
+
+.tabs-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.code-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 24px;
+  padding-right: 64px;
+  overflow-y: auto;
+}
+.code-container::before,
+.code-container::after {
+  display: flex;
+  content: '';
+  width: 6px;
+  height: calc(100% - 32px);
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  border: 1px solid var(--ino-system-label-color);
+}
+.code-container::before {
+  left: 16px;
+  border-right: none;
+}
+.code-container::after {
+  right: 16px;
+  border-left: none;
+}
+.code-container pre {
+  white-space: pre-wrap;
+}
+.pre-code-container {
+  overflow-y: auto;
+  height: 100%;
+}
+.code-copy {
+  position: absolute;
+  right: 32px;
+  top: 16px;
 }
 
 @media (max-width: 950px) {

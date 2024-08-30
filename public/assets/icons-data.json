@@ -1015,5 +1015,103 @@
       "ino",
       "trash"
     ]
+  },
+  {
+    "id": 158,
+    "name": "ino-clipboard-check",
+    "title": "clipboard check",
+    "keywords": [
+      "ino",
+      "clipboard",
+      "check"
+    ]
+  },
+  {
+    "id": 159,
+    "name": "ino-clipboard-list",
+    "title": "clipboard list",
+    "keywords": [
+      "ino",
+      "clipboard",
+      "list"
+    ]
+  },
+  {
+    "id": 160,
+    "name": "ino-clipboard-off",
+    "title": "clipboard off",
+    "keywords": [
+      "ino",
+      "clipboard",
+      "off"
+    ]
+  },
+  {
+    "id": 161,
+    "name": "ino-clipboard-x",
+    "title": "clipboard x",
+    "keywords": [
+      "ino",
+      "clipboard",
+      "x"
+    ]
+  },
+  {
+    "id": 162,
+    "name": "ino-clipboard",
+    "title": "clipboard",
+    "keywords": [
+      "ino",
+      "clipboard"
+    ]
+  },
+  {
+    "id": 164,
+    "name": "ino-copy-check",
+    "title": "copy check",
+    "keywords": [
+      "ino",
+      "copy",
+      "check"
+    ]
+  },
+  {
+    "id": 165,
+    "name": "ino-copy-off",
+    "title": "copy off",
+    "keywords": [
+      "ino",
+      "copy",
+      "off"
+    ]
+  },
+  {
+    "id": 166,
+    "name": "ino-copy-plus",
+    "title": "copy plus",
+    "keywords": [
+      "ino",
+      "copy",
+      "plus"
+    ]
+  },
+  {
+    "id": 167,
+    "name": "ino-copy-x",
+    "title": "copy x",
+    "keywords": [
+      "ino",
+      "copy",
+      "x"
+    ]
+  },
+  {
+    "id": 168,
+    "name": "ino-copy",
+    "title": "copy",
+    "keywords": [
+      "ino",
+      "copy"
+    ]
   }
 ]
