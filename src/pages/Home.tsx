@@ -14,13 +14,15 @@ interface Icon {
 
 const Home: React.FC = () => {
   const [icons, setIcons] = useState<Icon[]>([]);
-  const [search, setSearch] = useState('');
-  const [filteredIcons, setFilteredIcons] = useState<Icon[]>([]);
+  const [searchResults, setSearchResults] = useState<Icon[]>([]);
 
   useEffect(() => {
     fetch('/assets/icons-data.json')
       .then(response => response.json())
-      .then(data => setIcons(data));
+      .then(data => {
+        setIcons(data);
+        setSearchResults(data);
+      });
   }, []);
 
 
@@ -28,14 +30,16 @@ const Home: React.FC = () => {
     <div>
       <NavBar />
       <h1 className="text-center font-bold text-[32px] mt-5 mb-4 md:mt-10 md:mb-8">Awesome <IconCounter /> free SVG icons</h1>
-      <ToolBar search={search} setSearch={setSearch} setFilteredIcons={setFilteredIcons} />
-      <div className='icons-list'>
-        {filteredIcons.length > 0 ? (
-          filteredIcons.map(icon => (
+      <ToolBar setSearchResults={setSearchResults} icons={icons} />
+      <div className={"icons-list " + (searchResults.length > 0 ? '' : 'no-items')}>
+        {searchResults.length > 0 ? (
+          searchResults.map(icon => (
             <IconCard key={icon.id} name={icon.name} title={icon.title} keywords={icon.keywords} />
           ))
         ) : (
-          <p>No icon found =(</p>
+          <p className='text-center w-full no-items-found'>
+            <span>No</span> <span> icon</span> <span> found</span> <span> =(</span>
+          </p>
         )}
       </div>
       <FooterBar />

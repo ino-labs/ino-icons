@@ -7,6 +7,8 @@ import iconResize from '../images/icon-resize.svg';
 import iconBorder from '../images/icon-border.svg';
 import iconClose from '/assets/icons/ino-close.svg';
 import iconCopy from '/assets/icons/ino-copy.svg';
+import iconCopyCheck from '/assets/icons/ino-copy-check.svg';
+import iconCopyX from '/assets/icons/ino-copy-x.svg';
 import iconDownload from '/assets/icons/ino-download-arrow-down.svg';
 import { MuiColorInput } from 'mui-color-input';
 
@@ -20,12 +22,13 @@ interface Icon {
 const IconPage: React.FC = () => {
   const { name } = useParams<{ name: string }>();
   const [size, setSize] = useState(100);
-  const [strokeWidth, setStrokeWidth] = useState(1);
+  const [strokeWidth, setStrokeWidth] = useState(2);
   const [svgContent, setSvgContent] = useState<string>('');
-  const [search, setSearch] = useState('');
   const { darkMode } = useDarkMode();
   const [iconTitle, setIconTitle] = useState<string>('');
   const [keywords, setKeywords] = useState<string[]>([]); // Adicionando state para keywords
+  const [copyIcon, setCopyIcon] = useState(iconCopy);
+  const [copyClass, setCopyClass] = useState('clicked-button');
 
   // Define a cor inicial baseada no modo dark
   const defaultColor = darkMode ? '#FFFFFF' : '#000000';
@@ -61,13 +64,30 @@ const IconPage: React.FC = () => {
   // Função para copiar o código SVG para a área de transferência
   const handleCopy = () => {
     navigator.clipboard.writeText(updatedSvgContent)
-      .then(() => alert('SVG code copied to clipboard!'))
-      .catch(err => console.error('Failed to copy SVG:', err));
+      .then(() => {
+        setCopyIcon(iconCopyCheck); // Imagem de sucesso
+        setCopyClass('clicked-button-success');
+        setTimeout(() => {
+          setCopyIcon(iconCopy); // Voltar para a imagem padrão
+          setCopyClass('clicked-button');
+        }, 1500); // Tempo de espera de 2 segundos
+      })
+      .catch(err => {
+        setCopyIcon(iconCopyX); // Imagem de erro
+        setCopyClass('clicked-button-error');
+        setTimeout(() => {
+          setCopyIcon(iconCopy); // Voltar para a imagem padrão
+          setCopyClass('clicked-button');
+        }, 1500); // Tempo de espera de 2 segundos
+        console.error('Failed to copy SVG:', err);
+      });
   };
 
   // Atualiza o conteúdo SVG com os novos valores
   const updatedSvgContent = svgContent
-    .replace(/<svg/, `<svg id="svg-icon" style="width: ${size}px; height: ${size}px;"`)
+    .replace(/<svg/, `<svg id="${name}" style="width: ${size}px; height: ${size}px;"`)
+    .replace(/width="[^"]*"/g, `width="${size}"`)
+    .replace(/height="[^"]*"/g, `height="${size}"`)
     .replace(/stroke-width="[^"]*"/g, `stroke-width="${strokeWidth}"`)
     .replace(/stroke="[^"]*"/g, `stroke="${color}"`);
 
@@ -151,8 +171,8 @@ const IconPage: React.FC = () => {
               <div className="pre-code-container">
                 <pre>{updatedSvgContent}</pre>
               </div>
-              <button className='code-copy' onClick={handleCopy}>
-                <img className='filter-invert-0' src={iconCopy} title="copy svg" alt="copy svg" />
+              <button className={copyClass +' code-copy'} onClick={handleCopy}>
+                <img src={copyIcon} title="copy svg" alt="copy svg" />
               </button>
             </div>
           </div>

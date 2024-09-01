@@ -4,8 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "icons": "node --loader ts-node/esm generateIconsJson.ts",
+    "reorganize-icons": "node --loader ts-node/esm reorganize.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

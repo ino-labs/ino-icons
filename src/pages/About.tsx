@@ -4,12 +4,11 @@ import FooterBar from '../components/FooterBar';
 import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
-  const [search, setSearch] = useState('');
 
   return (
     <div>
-      <NavBar search={search} setSearch={setSearch} />
-      <h1 className="text-center font-bold text-[32px] sm:mt-5 sm:mb-4 md:mt-10 md:mb-8">About INO icons</h1>
+      <NavBar />
+      <h1 className="text-center font-bold text-[32px] mt-2 mb-2 sm:mt-5 sm:mb-4 md:mt-10 md:mb-8">About INO icons</h1>
       <div className='about-container'>
         <p><span className='font-extrabold'>INO icons</span> is a free tool that helps you create a library of svg icons for your projects.
           <ul>
