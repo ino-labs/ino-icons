@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useDarkMode } from '../contexts/DarkModeContext';
 import iconMenuTwoBars from '/assets/icons/ino-menu-two-bars.svg';
@@ -8,13 +8,6 @@ import iconMoon from '/assets/icons/ino-moon.svg';
 
 interface NavBarProps {
   
-}
-
-interface Icon {
-  id: number;
-  name: string;
-  title: string;
-  keywords: string[];
 }
 
 const NavBar: React.FC<NavBarProps> = () => {
