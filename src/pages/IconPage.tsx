@@ -114,8 +114,8 @@ const IconPage: React.FC = () => {
   return (
     <div>
       <NavBar />
-      <div className="icon-page-header px-4 pb-4">
-        <h1 className='text-left font-bold text-[24px] sm:mt-4 sm:mb-1 md:mt-8 md:mb-2'>INO - {iconTitle}</h1>
+      <div className="icon-page-header px-4 py-4">
+        <h1 className='text-left font-bold text-[24px] sm:mb-1 md:mb-2'>INO - {iconTitle}</h1>
         {/* Exibe as tags com as keywords do ícone */}
         <div className='icon-keywords'>
           {keywords.map((keyword, index) => (

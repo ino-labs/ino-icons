@@ -60,6 +60,7 @@ body.dark-mode {
 nav {
   display: flex;
   align-items: center;
+  border-top: 1px solid var(--ino-system-border-color);
   border-bottom: 1px solid var(--ino-system-border-color);
   height: 64px;
 }
@@ -121,7 +122,7 @@ input.search-icons::placeholder {
   position: absolute;
   top: 48px;
   left: 16px;
-  z-index: 1;
+  z-index: 99;
   background-color: var(--ino-system-icon-card-bg-color);
   width: 230px;
   height: auto;
@@ -381,6 +382,7 @@ input.search-icons::placeholder {
 }
 .icon-controls .icon-control:first-child {
   width: auto;
+  min-width: fit-content;
   flex-grow: 0;
 }
 .icon-controls .icon-control:not(:last-child) {
@@ -518,13 +520,14 @@ input.search-icons::placeholder {
   border: 1px solid var(--ino-overlay-border-color);
   border-radius: 0 !important;
   box-shadow: -8px 8px 0 var(--ino-overlay-border-color) !important;
+  background-color: var(--ino-system-icon-card-bg-color) !important;
 }
 .MuiPopover-paper > div {
   padding: 16px !important;
 }
 
 .footer {
-  padding: 4px 16px;
+  padding: 8px 16px;
   border-top: 1px solid var(--ino-system-border-color);
   border-bottom: 1px solid var(--ino-system-border-color);
 }
