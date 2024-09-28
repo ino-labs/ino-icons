@@ -5,15 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "icons": "node --loader ts-node/esm generateIconsJson.ts",
-    "reorganize-icons": "node --loader ts-node/esm reorganize.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "chalk": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "mui-color-input": "^3.0.0",
+    "path-browserify": "^1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
@@ -31,6 +32,7 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "postcss": "^8.4.41",
+    "react-dropzone": "^14.2.3",
     "tailwindcss": "^3.4.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3",
