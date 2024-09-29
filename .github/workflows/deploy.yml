@@ -18,11 +18,7 @@ jobs:
 
       - name: Build
         run: npm run build # The build command of your project
-
-      - name: Open Web Client Directory
-        working-directory: src/webclient
-        run: |
-          ls -la
+        working-directory: ${{ github.workspace }}/${{ env.PROJECT_PATH }}
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
