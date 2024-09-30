@@ -89,7 +89,6 @@
   },
   {
     "id": "1",
-    "id": "1",
     "name": "ino-arrow-back-up",
     "title": "arrow back up",
     "keywords": [
@@ -566,6 +565,15 @@
     ]
   },
   {
+    "id": "1727657462338",
+    "name": "ino-barcode",
+    "title": "barcode",
+    "keywords": [
+      "barcode"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M5 5L5 19M16 5V19M12 5V19M9 5V19M19 5V19\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
     "id": "1727570122896",
     "name": "ino-bell",
     "title": "bell",
@@ -807,6 +815,25 @@
       "internet"
     ],
     "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\r\n<path d=\"M18 18C19.6569 18 21 16.6569 21 15C21 13.3431 19.6569 12 18 12H16.9C16.9656 11.6769 17 11.3425 17 11C17 8.23858 14.7614 6 12 6C9.58104 6 7.56329 7.71776 7.10002 10H7C4.79086 10 3 11.7909 3 14C3 15.9803 4.43899 17.6244 6.32833 17.9439M9 16.2461L12.1095 13M12.1095 13L15.3069 16.272M12.1095 13L12.1095 21.272\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\r\n</svg>\r\n"
+  },
+  {
+    "id": "1727657462341",
+    "name": "ino-code",
+    "title": "code",
+    "keywords": [
+      "code"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8 18.7279L2.34315 13.0711C1.95262 12.6805 1.95262 12.0474 2.34315 11.6569L8 6M15.9999 18.7279L21.6567 13.0711C22.0473 12.6805 22.0473 12.0474 21.6567 11.6569L15.9999 6\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
+    "id": "1727657462342",
+    "name": "ino-code-xml",
+    "title": "code xml",
+    "keywords": [
+      "code",
+      "xml"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M17 17.475L21.7539 12.5861C22.082 12.2486 22.082 11.7014 21.7539 11.3639L17 6.475M7 17.475L2.24614 12.5861C1.91795 12.2486 1.91795 11.7014 2.24614 11.3639L7 6.475M14.9515 4L8.83919 19.8631\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
   },
   {
     "id": "1727570122904",
@@ -1122,6 +1149,17 @@
     ]
   },
   {
+    "id": "1727657462343",
+    "name": "ino-globe",
+    "title": "globe",
+    "keywords": [
+      "globe",
+      "internet",
+      "world"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12M21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12M21 12H3M12.0315 20.9724C10.7675 19.8497 9.75489 18.4727 9.06013 16.9315C8.36538 15.3902 8.00412 13.7196 8.00003 12.029C7.99595 10.3384 8.34913 8.66604 9.03643 7.12147C9.72372 5.5769 10.7296 4.19498 11.9882 3.06626M11.9685 20.9724C13.2325 19.8497 14.2451 18.4727 14.9399 16.9315C15.6346 15.3902 15.9959 13.7196 16 12.029C16.004 10.3384 15.6509 8.66604 14.9636 7.12147C14.2763 5.5769 13.2704 4.19498 12.0118 3.06626\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
     "id": "1727570122860",
     "name": "ino-heart",
     "title": "heart",
@@ -1208,6 +1246,15 @@
     ]
   },
   {
+    "id": "1727657462344",
+    "name": "ino-layout",
+    "title": "layout",
+    "keywords": [
+      "layout"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M3 8H21M9 8L9 21M5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
     "id": "96",
     "name": "ino-layout-dashboard",
     "title": "layout dashboard",
@@ -1264,6 +1311,26 @@
     ]
   },
   {
+    "id": "1727657462345",
+    "name": "ino-message-square",
+    "title": "message square",
+    "keywords": [
+      "message",
+      "square",
+      "chat"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.00011 7C4.00011 5.89543 4.89554 5 6.00011 5H19.0001C20.1047 5 21.0001 5.89543 21.0001 7V14C21.0001 15.1046 20.1047 16 19.0001 16H9.87263C9.37881 16 8.61548 16 7.99979 16C7.37029 16 6.77782 16.2964 6.40011 16.8L4 20C4 16 4.00011 17.2405 4.00011 16V7Z\" stroke=\"black\" stroke-width=\"2\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
+    "id": "1727657462346",
+    "name": "ino-minus",
+    "title": "minus",
+    "keywords": [
+      "minus"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M20 12L4 12\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
     "id": "100",
     "name": "ino-moon",
     "title": "moon",
@@ -1316,6 +1383,24 @@
     "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M18.396 11.1226C19.0895 11.502 19.0895 12.498 18.396 12.8773L7.22987 18.9848C6.56347 19.3493 5.75 18.867 5.75 18.1074L5.75 5.89253C5.75 5.13296 6.56347 4.65069 7.22987 5.01519L18.396 11.1226Z\" stroke=\"black\" stroke-width=\"2\" stroke-linejoin=\"round\"/>\n</svg>\n"
   },
   {
+    "id": "1727657462347",
+    "name": "ino-plus",
+    "title": "plus",
+    "keywords": [
+      "plus"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M12 4V20M20 12L4 12\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
+    "id": "1727657462348",
+    "name": "ino-printer",
+    "title": "printer",
+    "keywords": [
+      "printer"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M17.3333 16H19.1111C19.602 16 20 15.5523 20 15V10C20 9.44772 19.602 9 19.1111 9H4.88889C4.39797 9 4 9.44772 4 10V15C4 15.5523 4.39797 16 4.88889 16H6.66667M7.55556 9H16.4444C16.9354 9 17.3333 8.55228 17.3333 8V5C17.3333 4.44772 16.9354 4 16.4444 4H7.55556C7.06464 4 6.66667 4.44772 6.66667 5V8C6.66667 8.55228 7.06464 9 7.55556 9ZM7.55556 19H16.4444C16.9354 19 17.3333 18.5523 17.3333 18V14C17.3333 13.4477 16.9354 13 16.4444 13H7.55556C7.06464 13 6.66667 13.4477 6.66667 14V18C6.66667 18.5523 7.06464 19 7.55556 19Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
     "id": "104",
     "name": "ino-refresh-ccw",
     "title": "refresh ccw",
@@ -1334,6 +1419,16 @@
     ]
   },
   {
+    "id": "1727657462349",
+    "name": "ino-scan-barcode",
+    "title": "scan barcode",
+    "keywords": [
+      "scan",
+      "barcode"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M7.5 6.6V17.4M16.5 6.6V17.4M13.2273 6.6V17.4M10.7727 6.6V17.4M16.5 21H19.2C20.1941 21 21 20.1941 21 19.2V16.5M7.5 21H4.8C3.80589 21 3 20.1941 3 19.2V16.5M3 7.5V4.8C3 3.80589 3.80589 3 4.8 3H7.5M16.5 3H19.2C20.1941 3 21 3.80589 21 4.8V7.5\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
     "id": "106",
     "name": "ino-search",
     "title": "search",
@@ -1349,6 +1444,16 @@
       "share"
     ],
     "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8.85704 10.5777L14.107 7.54663M8.85703 13.6088L14.107 16.6399M20.232 6C20.232 7.65685 18.8889 9 17.232 9C15.5752 9 14.232 7.65685 14.232 6C14.232 4.34315 15.5752 3 17.232 3C18.8889 3 20.232 4.34315 20.232 6ZM20.232 18C20.232 19.6569 18.8889 21 17.232 21C15.5752 21 14.232 19.6569 14.232 18C14.232 16.3431 15.5752 15 17.232 15C18.8889 15 20.232 16.3431 20.232 18ZM8.99994 12.1339C8.99994 13.7908 7.65679 15.1339 5.99994 15.1339C4.34308 15.1339 2.99994 13.7908 2.99994 12.1339C2.99994 10.477 4.34308 9.1339 5.99994 9.1339C7.65679 9.1339 8.99994 10.477 8.99994 12.1339Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n</svg>\n"
+  },
+  {
+    "id": "1727657462350",
+    "name": "ino-shopping-cart",
+    "title": "shopping cart",
+    "keywords": [
+      "shopping",
+      "cart"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4.09009 6.9375H21.0901L19.4381 14.3714C19.2348 15.2864 18.4231 15.9375 17.4857 15.9375H7.69443C6.75704 15.9375 5.94541 15.2864 5.74206 14.3714L4.09009 6.9375ZM4.09009 6.9375L3.21509 3H2M8.09009 19.9375C8.09009 20.4898 7.64238 20.9375 7.09009 20.9375C6.53781 20.9375 6.09009 20.4898 6.09009 19.9375C6.09009 19.3852 6.53781 18.9375 7.09009 18.9375C7.64238 18.9375 8.09009 19.3852 8.09009 19.9375ZM19.0901 19.9375C19.0901 20.4898 18.6424 20.9375 18.0901 20.9375C17.5378 20.9375 17.0901 20.4898 17.0901 19.9375C17.0901 19.3852 17.5378 18.9375 18.0901 18.9375C18.6424 18.9375 19.0901 19.3852 19.0901 19.9375Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
   },
   {
     "id": "107",
@@ -1374,6 +1479,28 @@
     "keywords": [
       "sun"
     ]
+  },
+  {
+    "id": "1727657462374",
+    "name": "ino-thumbs-down",
+    "title": "thumbs down",
+    "keywords": [
+      "thumbs",
+      "down",
+      "dislike"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M15.6396 2.64662H18.6396C19.7442 2.64662 20.6396 3.54205 20.6396 4.64662L20.6396 10.6466C20.6396 11.7512 19.7442 12.6466 18.6396 12.6466H15.6396M15.6396 2.64662L15.6396 12.6466M15.6396 2.64662L6.3339 2.64662C5.35622 2.64662 4.52184 3.35345 4.36111 4.31782L3.02778 12.3178C2.8246 13.5369 3.76469 14.6466 5.00057 14.6466L8.40828 14.6466C9.40218 14.6466 10.2453 15.3765 10.3877 16.3601L10.8112 19.2865C11.1442 21.5868 14.4719 21.5643 14.7737 19.2597L15.6396 12.6466\" stroke=\"black\" stroke-width=\"2\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
+    "id": "1727657462375",
+    "name": "ino-thumbs-up",
+    "title": "thumbs up",
+    "keywords": [
+      "thumbs",
+      "up",
+      "like"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M8 21H5C3.89543 21 3 20.1046 3 19L3 13C3 11.8954 3.89543 11 5 11H8M8 21L8 11M8 21L17.3057 21C18.2834 21 19.1178 20.2932 19.2785 19.3288L20.6119 11.3288C20.815 10.1097 19.875 8.99999 18.6391 8.99999L15.2314 8.99999C14.2375 8.99999 13.3944 8.27013 13.252 7.28647L12.8284 4.36012C12.4955 2.05978 9.1678 2.08229 8.866 4.38692L8 11\" stroke=\"black\" stroke-width=\"2\" stroke-linejoin=\"round\"/>\n</svg>\n"
   },
   {
     "id": "109",
@@ -1431,5 +1558,15 @@
       "x"
     ],
     "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M15 14.0002L19.0001 10.0001M15 10L19.0001 14.0001M7.30028 15.0286L10.2142 18.7309C10.8013 19.4769 12 19.0617 12 18.1125V5.88747C12 4.9382 10.8013 4.52306 10.2142 5.269L7.30028 8.97138C7.11068 9.21229 6.82104 9.35291 6.51447 9.35291H5C4.44772 9.35291 4 9.80063 4 10.3529V13.647C4 14.1993 4.44772 14.647 5 14.647H6.51447C6.82104 14.647 7.11068 14.7877 7.30028 15.0286Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
+  },
+  {
+    "id": "1727657462376",
+    "name": "ino-window",
+    "title": "window",
+    "keywords": [
+      "window",
+      "mac"
+    ],
+    "content": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M3 10H21M6 7H6.5M10 7H10.5M5 20H19C20.1046 20 21 19.1046 21 18V6C21 4.89543 20.1046 4 19 4H5C3.89543 4 3 4.89543 3 6V18C3 19.1046 3.89543 20 5 20Z\" stroke=\"black\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>\n"
   }
 ]
