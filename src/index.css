@@ -583,7 +583,26 @@ input.search-icons::placeholder {
   flex-direction: column;
   overflow-y: auto;
 }
-
+.tabs-container-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--ino-system-border-color);
+  z-index: 2;
+}
+.tabs-container-tabs button {
+  z-index: 1;
+  padding: 8px;
+  background-color: var(--ino-system-icon-card-bg-color);
+  bottom: -1px;
+  position: relative;
+  border-bottom: 1px solid var(--ino-system-border-color);
+  opacity: .5;
+}
+.tabs-container-tabs button.active {
+  border: 1px solid var(--ino-system-border-color);
+  border-bottom: none;
+  opacity: 1;
+}
 .code-container {
   width: 100%;
   height: 100%;

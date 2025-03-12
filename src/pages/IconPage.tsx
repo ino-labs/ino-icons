@@ -17,6 +17,7 @@ interface Icon {
   name: string;
   title: string;
   keywords: string[];
+  cssClass: string;
 }
 
 const IconPage: React.FC = () => {
@@ -27,12 +28,14 @@ const IconPage: React.FC = () => {
   const { darkMode } = useDarkMode();
   const [iconTitle, setIconTitle] = useState<string>('');
   const [keywords, setKeywords] = useState<string[]>([]); // Adicionando state para keywords
+  const [cssClassIcon, setCssClassIcon] = useState<string>(''); // Adicionando state para keywords
   const [copyIcon, setCopyIcon] = useState(iconCopy);
   const [copyClass, setCopyClass] = useState('clicked-button');
 
   // Define a cor inicial baseada no modo dark
   const defaultColor = darkMode ? '#FFFFFF' : '#000000';
   const [color, setColor] = useState(defaultColor);
+  const [activeTab, setActiveTab] = useState("svg"); // Controla a tab ativa
 
   useEffect(() => {
     // Carrega o conteúdo SVG e os dados do ícone
@@ -47,6 +50,7 @@ const IconPage: React.FC = () => {
         if (icon) {
           setIconTitle(icon.title);
           setKeywords(icon.keywords); // Define as keywords do ícone
+          setCssClassIcon(icon.cssClass);
         }
       });
   }, [name]);
@@ -63,25 +67,34 @@ const IconPage: React.FC = () => {
 
   // Função para copiar o código SVG para a área de transferência
   const handleCopy = () => {
-    navigator.clipboard.writeText(updatedSvgContent)
+    let textToCopy = "";
+  
+    if (activeTab === "svg") {
+      textToCopy = svgContent;
+    } else if (activeTab === "html") {
+      textToCopy = `<i class="${cssClassIcon}"></i>`;
+    }
+  
+    navigator.clipboard.writeText(textToCopy)
       .then(() => {
-        setCopyIcon(iconCopyCheck); // Imagem de sucesso
-        setCopyClass('clicked-button-success');
+        setCopyIcon(iconCopyCheck); // Ícone de sucesso
+        setCopyClass("clicked-button-success");
         setTimeout(() => {
-          setCopyIcon(iconCopy); // Voltar para a imagem padrão
-          setCopyClass('clicked-button');
-        }, 1500); // Tempo de espera de 2 segundos
+          setCopyIcon(iconCopy); // Ícone padrão
+          setCopyClass("clicked-button");
+        }, 1500);
       })
       .catch(err => {
-        setCopyIcon(iconCopyX); // Imagem de erro
-        setCopyClass('clicked-button-error');
+        setCopyIcon(iconCopyX); // Ícone de erro
+        setCopyClass("clicked-button-error");
         setTimeout(() => {
-          setCopyIcon(iconCopy); // Voltar para a imagem padrão
-          setCopyClass('clicked-button');
-        }, 1500); // Tempo de espera de 2 segundos
-        console.error('Failed to copy SVG:', err);
+          setCopyIcon(iconCopy); // Ícone padrão
+          setCopyClass("clicked-button");
+        }, 1500);
+        console.error("Failed to copy:", err);
       });
   };
+  
 
   // Atualiza o conteúdo SVG com os novos valores
   const updatedSvgContent = svgContent
@@ -164,17 +177,47 @@ const IconPage: React.FC = () => {
             </div>
           </div>
           <div className="tabs-container">
-            <div className="tabs-container-title mx-4 mt-2">
-              <h3>SVG Code:</h3>
-            </div>
-            <div className='code-container'>
-              <div className="pre-code-container">
-                <pre>{updatedSvgContent}</pre>
+            <div className="tabs-header">
+              <div className="tabs-container-tabs mx-4 mt-2">
+                <button
+                  className={activeTab === "svg" ? "active" : ""}
+                  onClick={() => setActiveTab("svg")}
+                  title="SVG"
+                >
+                  SVG
+                </button>
+                <button 
+                  className={activeTab === "html" ? "active" : ""}
+                  onClick={() => setActiveTab("html")}
+                  title="HTML"
+                >
+                  HTML
+                </button>
               </div>
-              <button className={copyClass +' code-copy'} onClick={handleCopy}>
-                <img src={copyIcon} title="copy svg" alt="copy svg" />
-              </button>
             </div>
+            {activeTab === "svg" ? (
+              <div className="tab-content">
+                <div className='code-container'>
+                  <div className="pre-code-container">
+                    <pre>{updatedSvgContent}</pre>
+                  </div>
+                  <button className={copyClass +' code-copy'} onClick={handleCopy}>
+                    <img src={copyIcon} title="copy svg" alt="copy svg" />
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div className="tab-content">
+                <div className='code-container'>
+                  <div className="pre-code-container">
+                    <pre>&lt;i class="{cssClassIcon}"&gt;&lt;/i&gt;</pre>
+                  </div>
+                  <button className={copyClass +' code-copy'} onClick={handleCopy}>
+                    <img src={copyIcon} title="copy svg" alt="copy svg" />
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>
