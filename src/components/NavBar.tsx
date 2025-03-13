@@ -48,14 +48,13 @@ const NavBar: React.FC<NavBarProps> = () => {
         </ul>
       </div>
       <div className="nav-second-content">
-        
         <ul className='dark-donate-container'>
           <li><Link className='link' to="https://buymeacoffee.com/n3pu" target="_blank" rel="noopener noreferrer">Buy me a coffee</Link></li>
           <li>or</li>
           <li><Link className='link' to="https://www.paypal.com/donate/?business=CJPN8GQVW32UU&amount=5&no_recurring=0&item_name=Support+me+if+you+think+I%27ve+given+you+good+results&currency_code=USD" target="_blank" rel="noopener noreferrer">Donate</Link></li>
         </ul>
         <ul className='dark-mode-container'>
-          <li className='dark-mode-container-link'><Link className='link' to="https://github.com/n3pu/ino-icons" target="_blank" rel="noopener noreferrer">Github</Link></li>
+          <li className='dark-mode-container-link'><Link className='link' to="https://github.com/n3pu/ino-icons" target="_blank" rel="noopener noreferrer">Docs</Link></li>
           <li className='dark-mode-container-link'><Link className='link' to="/about">About</Link></li>
           <li>
             <label className="toggleDarkLabel" arial-label="Toggle dark mode">
