@@ -28,7 +28,6 @@ const IconPage: React.FC = () => {
   const { darkMode } = useDarkMode();
   const [iconTitle, setIconTitle] = useState<string>('');
   const [keywords, setKeywords] = useState<string[]>([]); // Adicionando state para keywords
-  const [cssClassIcon, setCssClassIcon] = useState<string>('');
   const [copyIcon, setCopyIcon] = useState(iconCopy);
   const [copyClass, setCopyClass] = useState('clicked-button');
 
@@ -50,7 +49,6 @@ const IconPage: React.FC = () => {
         if (icon) {
           setIconTitle(icon.title);
           setKeywords(icon.keywords); // Define as keywords do ícone
-          setCssClassIcon(icon.cssClass);
         }
       });
   }, [name]);
@@ -72,7 +70,7 @@ const IconPage: React.FC = () => {
     if (activeTab === "svg") {
       textToCopy = svgContent;
     } else if (activeTab === "html") {
-      textToCopy = `<i class="${cssClassIcon}"></i>`;
+      textToCopy = `<i class="icon-${name}"></i>`;
     }
   
     navigator.clipboard.writeText(textToCopy)
