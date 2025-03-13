@@ -1,7 +1,7 @@
 # INO icons
 
 <!-- BEGIN_LOGO -->
-<img src="/.github/logo.png" width="128" align="right" />
+<img src="/.github/logo.svg" width="128" align="right" />
 <!-- END_LOGO -->
 
 <!-- BEGIN_OVERVIEW -->
