@@ -28,7 +28,7 @@ const IconPage: React.FC = () => {
   const { darkMode } = useDarkMode();
   const [iconTitle, setIconTitle] = useState<string>('');
   const [keywords, setKeywords] = useState<string[]>([]); // Adicionando state para keywords
-  const [cssClassIcon, setCssClassIcon] = useState<string>(''); // Adicionando state para keywords
+  const [cssClassIcon, setCssClassIcon] = useState<string>('');
   const [copyIcon, setCopyIcon] = useState(iconCopy);
   const [copyClass, setCopyClass] = useState('clicked-button');
 
@@ -210,7 +210,7 @@ const IconPage: React.FC = () => {
               <div className="tab-content">
                 <div className='code-container'>
                   <div className="pre-code-container">
-                    <pre>&lt;i class="{cssClassIcon}"&gt;&lt;/i&gt;</pre>
+                    <pre>&lt;i class="icon-{name}"&gt;&lt;/i&gt;</pre>
                   </div>
                   <button className={copyClass +' code-copy'} onClick={handleCopy}>
                     <img src={copyIcon} title="copy svg" alt="copy svg" />
