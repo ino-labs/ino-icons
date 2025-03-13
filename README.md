@@ -14,3 +14,21 @@ INO icons: Search, edit and download high-quality icons made in Figma. Customize
 
 Find out more on our website [inoicons.com](https://inoicons.com).
 <!-- END_OVERVIEW -->
+
+## Web
+
+- **It's very simple to use** – You just need to call the css and use the respective class in the tag as in the example below using `<i/>`:
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="icon.css" />
+  </head>
+  <body>
+    <i class="icon-ino-heart"></i>
+    <i class="icon-ino-login" style="color: red"></i>
+    <i class="icon-ino-mail"></i>
+  </body>
+</html>
+```
