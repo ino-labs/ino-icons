@@ -17,14 +17,14 @@ Find out more on our website [inoicons.com](https://inoicons.com).
 
 ## Web
 
-Get the icon font assets [here](https://github.com/n3pu/ino-icons/releases/download/1.0.0/ino-icons.zip).
+Get the icon font assets [here](https://github.com/n3pu/ino-icons/releases/).
 - **It's very simple to use** – You just need to call the css and use the respective class in the tag as in the example below using `<i/>`:
 
 ```html
 <!doctype html>
 <html>
   <head>
-    <script src="https://unpkg.com/@ino-labs/ino-icons@1.0.0"></script>
+    <script src="https://unpkg.com/@ino-labs/ino-icons@1.0.2"></script>
   </head>
   <body>
     <i class="icon-ino-heart"></i>
