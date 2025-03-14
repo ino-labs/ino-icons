@@ -24,7 +24,7 @@ Get the icon font assets [here](https://github.com/n3pu/ino-icons/releases/downl
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="icon.css" />
+    <script src="https://unpkg.com/@ino-labs/ino-icons@1.0.0"></script>
   </head>
   <body>
     <i class="icon-ino-heart"></i>
