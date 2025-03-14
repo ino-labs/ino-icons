@@ -1,7 +1,28 @@
 {
-  "name": "ino-icons",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@ino-labs/ino-icons",
+  "version": "1.0.0",
+  "description": "A collection of icons for Web",
+  "license": "MIT",
+  "homepage": "https://inoicons.com",
+  "author": {
+    "name": "N3pu",
+    "email": "n3pu.br@gmail.com"
+  },
+  "keywords": [
+    "ino",
+    "ino-icons",
+    "icon",
+    "font",
+    "svg",
+    "design",
+    "interface",
+    "UI",
+    "UX"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ino-labs/ino-icons.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite --host",
