@@ -17,7 +17,7 @@ Find out more on our website [inoicons.com](https://inoicons.com).
 
 ## Web
 
-Get the icon font assets [here](https://github.com/n3pu/ino-icons/releases/).
+Get the icon font assets [here](https://github.com/ino-labs/ino-icons/releases/).
 - **It's very simple to use** – You just need to call the css and use the respective class in the tag as in the example below using `<i/>`:
 
 ```html
