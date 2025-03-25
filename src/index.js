@@ -5,6 +5,6 @@ for (const weight of ["regular"]) {
   link.rel = "stylesheet";
   link.type = "text/css";
   link.href =
-    "https://unpkg.com/@ino-labs/ino-icons@1.0.0/src/font/" + weight + "/icon.css";
+    "https://unpkg.com/@ino-labs/ino-icons@1.0.3/src/font/" + weight + "/ino-icons.css";
   head.appendChild(link);
 }
