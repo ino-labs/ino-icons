@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 async function zipFolder() {
   const srcFolder = path.resolve(__dirname, "../src/font");
-  const zipPath = path.resolve(__dirname, "../public/assets/font/ino-icons.zip");
+  const zipPath = path.resolve(__dirname, "../public/assets/font/ino-icons-1.0.3.zip");
 
   try {
     await zip(srcFolder, zipPath);

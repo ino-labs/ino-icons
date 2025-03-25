@@ -24,12 +24,14 @@ Get the icon font assets [here](https://github.com/ino-labs/ino-icons/releases/)
 <!doctype html>
 <html>
   <head>
-    <script src="https://unpkg.com/@ino-labs/ino-icons@1.0.2"></script>
+    <script src="https://unpkg.com/@ino-labs/ino-icons@1.0.3"></script>
   </head>
   <body>
-    <i class="icon-ino-heart"></i>
-    <i class="icon-ino-login" style="color: red"></i>
-    <i class="icon-ino-mail"></i>
+    <i class="ino ino-heart"></i>
+    <i class="ino ino-login" style="color: red"></i>
+    <i class="ino ino-mail"></i>
+    <i class="ino">activity</i> <!-- ligature -->
+    <i class="ino">adjustments-horizontal</i> <!-- ligature -->
   </body>
 </html>
 ```
